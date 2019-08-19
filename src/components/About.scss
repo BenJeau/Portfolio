@@ -1,0 +1,82 @@
+@import '../constants';
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s border-radius ease;
+
+    .margin {
+        transition: 1s opacity ease;
+        opacity: 0;
+    }
+
+    .modal {
+        transition: 1s border-radius ease;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        position: relative;
+
+        .content {
+            position: relative;
+            color: #cdcdcd;
+            overflow-y: auto;
+            overflow-x: hidden;
+            transition: 1.5s opacity ease-in;
+
+            .inner-content {
+                float: right;
+                display: flex; 
+                flex-direction: column;
+                justify-content: flex-end;
+                border-radius: 5px;
+                margin-left: 30px;
+                padding: 15px 20px;
+
+                @media only screen and (max-width: 714px) {
+                    padding: 30px 20px;
+                }
+
+                @media only screen and (max-width: 675px) {
+                    padding: 45px 20px;
+                }
+
+                @media only screen and (max-width: 619px) {
+                    padding: 45px 0px;
+                    padding-right: 15px;
+                }
+
+                @media only screen and (max-width: 591px) {
+                    padding: 60px 0px;
+                    padding-right: 15px;
+                }
+
+                @media only screen and (max-width: 584px) {
+                    padding: 15px 20px;
+                    width: calc(100% - 40px);
+                    margin-bottom: 20px;
+                    margin-left: 0;
+                }
+            }
+
+            span {
+                font-size: 2em;
+                margin-bottom: -20px;
+            }
+
+            .row {
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                flex-direction: row;
+                text-align: center;
+                padding: 10px 0;
+
+                .text {
+                    padding: 0 20px;
+                }
+            }
+        }
+    }
+}
