@@ -1,0 +1,66 @@
+@import '../constants';
+
+ul, li {
+    padding: 0;
+    margin: 0;
+}
+
+
+#navbar {
+    background-color: #2b2b2b;
+    width: 100%;
+    position: fixed;
+    height: 50px;
+    bottom: 0;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px -2px 12px 0px;
+
+    .content {
+        margin: 0 auto;
+        max-width: 800px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        
+    ul {
+        display: flex;
+        list-style: none;
+        height: 100%;
+        align-items: center;
+
+        a {
+            margin: 0 25px 0 0;
+            cursor: pointer;
+            transition-duration: 0.2s;
+            color: $nav-link-color;
+            user-select: none;
+            text-decoration: none;
+            position: relative;
+            
+            &.selected {
+                font-weight: 800;
+
+            &:hover {
+                color: $nav-link-color;
+            }
+
+                &:after {
+                    width: 85%;
+                    left: 7.5%;
+                    border-radius: 1px;
+                    height: 2px !important;
+                }
+            }
+
+            &:hover {
+                color: #7c7c7c;
+            }
+
+            &:active {
+                color: $nav-link-color;
+            }
+        }
+    }
+    }
+}

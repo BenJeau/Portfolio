@@ -1,5 +1,14 @@
 @import './constants';
 
+button {
+	border: none;
+	outline: none;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
 .ReactModal__Overlay {
     opacity: 0;
     transition: opacity 200ms ease-in-out;
@@ -13,13 +22,12 @@
     opacity: 0;
 }
 
-
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #000; 
+  background: #2e2e2e; 
 }
 
 ::-webkit-scrollbar-thumb {

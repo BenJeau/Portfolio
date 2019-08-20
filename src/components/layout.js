@@ -8,19 +8,22 @@ export default ({ children }) => {
   return (
     <LanguageContext.Consumer>
       {data => {
-        return (<div
+        return (
+        <React.Fragment>
+        <div
           css={css`
           margin: 0 auto;
           max-width: 800px;
-          padding-top: ${rhythm(1.5)};
-          height: 100vh;
+          padding: ${rhythm(1.5)} 0;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
           `}>
           {children}
-          <Navbar />
         </div>
+
+        <Navbar />
+        </React.Fragment>
         )
       }}
     </LanguageContext.Consumer>

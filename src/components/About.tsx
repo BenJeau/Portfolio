@@ -25,6 +25,10 @@ const About: React.FC<AboutProps> = (props) => {
 	const info = Strings().about;
 
 	return (
+		<LanguageContext.Consumer>
+			{data => {
+				forceUpdate(data.lang);
+				return(
 		<div className='about' style={{ display: 'flex' }}>
 			<Animated animationIn='fadeIn' animationOut='fadeOut' isVisible>
 				<div className={'modal'}>
@@ -69,6 +73,8 @@ const About: React.FC<AboutProps> = (props) => {
 				</div>
 			</Animated>
 		  </div>
+			)}}
+		</LanguageContext.Consumer>
 	);
 }
 

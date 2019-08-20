@@ -2,18 +2,21 @@
 
 .language-switch {
     transition: 2s;
-
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    
     a {
         margin: 15px;
         background-color: transparent;
         border-width: 0px;
-        transition: 0.4s ease-out;
+        transition: 0.1s ease-out;
         display: flex;
         flex-direction: column;
         align-items: center;
         color: $nav-link-color;
         user-select: none;
-        transition: color 0.4s ease-out;
+        transition: color 0.1s ease-out;
 
         @media only screen and (max-width: 380px) {
             color: transparent;
@@ -26,12 +29,12 @@
         }
 
         &:active {
-            transition: 0.4s ease-out;
+            transition: 0.1s ease-out;
             color: $profile-shadow;
         }
 
         &:active>div>p {
-            transition: 0.4s ease-out;
+            transition: 0.1s ease-out;
             background-color: $profile-shadow;
         }
 
@@ -48,6 +51,10 @@
 
         .icon {
             width: 50px;
+        }
+
+        .animated {
+            opacity: 0;
         }
     }
 }

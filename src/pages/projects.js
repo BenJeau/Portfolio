@@ -10,15 +10,8 @@ export default ({ data }) => {
   return (
     <Layout>
       <div>
-        <h1
-          css={css`
-            display: inline-block;
-            border-bottom: 1px solid;
-          `}
-        >
-          Amazing Pandas Eating Things
-        </h1>
-        <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
+        <h1 css={css`
+                  margin-bottom: ${rhythm(2)};`}>Here are a list of my Github projects</h1>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
             <Link
@@ -43,7 +36,7 @@ export default ({ data }) => {
                   — {node.frontmatter.year}
                 </span>
               </h3>
-              <p>{node.excerpt}</p>
+              <p>{node.frontmatter.description}</p>
             </Link>
           </div>
         ))}
@@ -62,6 +55,7 @@ export const query = graphql`
           frontmatter {
             name
             year
+            description
           }
           fields {
             slug

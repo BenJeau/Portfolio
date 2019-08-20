@@ -2,29 +2,31 @@ import React from "react";
 import { Link } from "gatsby";
 import LanguageSwitch from "./LanguageSwitch";
 import Strings from "../utils/Strings";
+import './Navbar.scss';
 
-type NavbarProps = {
-
-}
-
-const Navbar: React.FC<NavbarProps> = (props) => {
+const Navbar: React.FC = (props) => {
     const info = Strings().navigation.pages;
 
+    const navLinks = ['/', '/projects/', 'resume.pdf'];
+
     return(
-        <div >
-          <Link to={`/`}>
-            {info[0]}
-          </Link>
+        <div id='navbar'>
+            <div className='content'>
+              <ul>
 
-          <Link to={`/projects/`}>
-            {info[1]}
-          </Link>
-
-          <Link to={`/resume/`}>
-            {info[2]}
-          </Link>
-
-          <LanguageSwitch />
+              {info.map((page: string, key: number) => {
+                console.log(window.location.pathname, page, window.location.pathname.includes(page))
+                return(
+                <li key={key}>
+                  <Link to={navLinks[key]} className={window.location.pathname == navLinks[key] ? 'selected' : ''}>
+                    {page}
+                  </Link>
+                </li>
+					      )})}
+              </ul>
+          
+              <LanguageSwitch />
+            </div>
         </div>
     );
 }

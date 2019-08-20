@@ -1,3 +1,50 @@
-.modal {
-    background-color: black;
+.project {
+
+    .close {
+        position: absolute;
+        right: 25px;
+        top: 25px;
+        color: #cfcfcf;
+        border-radius: 12.5px;
+        user-select: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition-duration: 0.2s;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+            transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1)
+        }
+
+        &:active {
+            transform: scale(0.9);
+        }
+    }
+
+    .modal {
+        margin: 25px;
+        position: relative;
+
+        .close {
+            right: 0;
+            top: 0;
+        }
+    }
+
+    .content {
+        .icon {
+            color: #858585;
+
+            &:hover {
+                color: #cdcdcd;
+            }
+
+            &:active {
+                color: #4b4b4b;
+            }
+        }
+    }
+
 }

@@ -7,7 +7,7 @@ const options = {
         styles: [`400`, `400i`, `700`, `700i`],
       },
     ],
-    baseFontSize: `18px`,
+    baseFontSize: `17px`,
     baseLineHeight: 1.4,
     headerColor: `rgba(255,255,255,0.8)`,
     bodyColor: `rgba(255,255,255,0.7)`,
