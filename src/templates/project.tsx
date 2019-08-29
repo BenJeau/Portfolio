@@ -1,12 +1,9 @@
-import React from "react"
+import React, { useEffect } from "react"
 import './project.scss';
 import { graphql } from "gatsby"
 import { ModalRoutingContext, Link } from 'gatsby-plugin-modal-routing'
 import feather from 'feather-icons';
 import Layout from "../components/layout";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import css from "@emotion/css";
 
 export default ({ data }) => {
   const post = data.markdownRemark
@@ -45,20 +42,44 @@ export default ({ data }) => {
     });
   }
 
-  wrapper.getElementsByTagName('h1')[0].appendChild(document.createTextNode(`<p>asdfasdf</p>`))
+  const moveToLink = () => {
+    var div = wrapper.querySelector('div h1');
 
+    console.log(div, wrapper);
+
+    let github = document.createElement('a');
+    github.href = post.frontmatter.link;
+    github.target = '_blank';
+    github.rel = 'noopener roreferrer';
+    github.innerHTML = feather.icons.github.toSvg();
+    github.style.marginBottom = '1.05rem';
+    github.style.marginLeft = '1rem';
+    github.classList.add('icon')
+    
+    var wrap = document.createElement('div');
+    wrap.innerHTML = div.outerHTML + github.outerHTML; 
+    wrap.style.display = 'flex'; 
+    wrap.style.flexDirection = 'row'; 
+    wrap.style.alignItems = 'flex-end'; 
+    
+    div.parentNode.insertBefore(wrap, div);
+    div.remove();
+
+    console.log(wrapper)
+ }
+
+//  useEffect(() => {
+//   moveToLink();
+//  })
+  // wrapper.getElementsByTagName('h1')[0].appendChild(document.createTextNode(`<p>asdfasdf</p>`))
+moveToLink();
   const content = (modal) => (
     <div className='project'>
     <div className={(!!modal && 'modal') + ' content'}>
       <Link to={`/projects/`} className='close' dangerouslySetInnerHTML={{ __html: feather.icons.x.toSvg({ height: 50, width: 50 }) }}>
       </Link>
 
-      <a href={post.frontmatter.link} target='_blank' rel='noopener noreferrer'>
-										<FontAwesomeIcon icon={faGithub} size='lg' className='icon' />
-									</a>
-      <div dangerouslySetInnerHTML={{ __html: wrapper.innerHTML }}>
-      
-      </div>
+      <div dangerouslySetInnerHTML={{ __html: wrapper.innerHTML }}/>
     </div>
   </div>
   )

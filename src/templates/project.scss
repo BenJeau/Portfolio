@@ -1,7 +1,7 @@
 .project {
 
     .close {
-        position: absolute;
+        position: fixed;
         right: 25px;
         top: 25px;
         color: #cfcfcf;
@@ -30,6 +30,7 @@
         .close {
             right: 0;
             top: 0;
+            position: absolute;
         }
     }
 

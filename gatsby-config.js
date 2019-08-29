@@ -82,7 +82,7 @@ module.exports = {
               bottom: 0,
               right: 0,
               left: 0,
-              margin: 100,
+              margin: `100px 0`,
             },
           }
         },
