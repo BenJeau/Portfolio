@@ -4,14 +4,24 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+	flex-direction: column;
+	margin-top: 50px;
     color: $nav-link-color;
     
     .profile-container {
         display: flex;
         width: 100%;
         justify-content: center;
-        align-items: flex-end;
+		align-items: flex-end;
+		
+		#first-name {
+			font-weight: 100; 
+			margin-right: 0.3em;
+		}
+
+		#last-name {
+			text-transform: uppercase;
+		}
     }
 	
     .picture-container {
@@ -56,7 +66,7 @@
             margin: 15px;
             border-radius: 30px;
             z-index: 5000;
-            background-color: $background;
+            background-color: $bubble;
             right: 0px;
             bottom: 0;
             position: absolute;
@@ -65,22 +75,28 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: $nav-link-color;
-
+			color: $accent;
+			
             a {
                 color: $nav-link-color;
+				text-decoration: none; 
+				padding: 0;
+				margin: 0;
             }
 
             &:hover {
                 transition: 0.5s ease;
-                right: 00px;
-                width: 180px;
+                right: 0;
+				width: 180px;
+				padding: 0px 10px;
+				padding-bottom: -10px;
             }
 
             .social {
                 justify-content: space-evenly;
                 flex: 1 1 auto;
 				width: 100%;
+				padding-top: 5px;
 				
 				@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 					justify-content: space-around;
@@ -94,8 +110,7 @@
 
                 .icon { 
                     cursor: pointer;
-                    font-size: 25px;
-                    transition-duration: 0.8s;
+					transition-duration: 0.8s;
     
                     &:hover {
                         transition: 0.1s ease-out;
@@ -158,20 +173,39 @@
     }
 }
 
-@media only screen and (max-width: 320px) {
-    .home {
-        h1 {
-            font-size: 10vw;
-        }
+@media only screen and (max-width: 800px) {
+	.home {
+		.profile-container {
+			flex-direction: column;
+			align-items: center;
+		}
 
-        ReactTextTransition {
-            font-size: 6vw;
-        }
-    }
+		.picture-container {
+			margin-bottom: 30px;
+		}
+
+		.home-text { 
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+		}
+	}
 }
 
 @media only screen and (max-width: 500px) {
     .home {
+
+		#first-name {
+			font-size: 10vw;
+		}
+
+		#last-name {
+			font-size: 10vw;
+		}
+
+		.text-transition {
+			font-size: 3vw;
+		}
 
         .picture-container {
             height: 60vw;

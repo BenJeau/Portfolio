@@ -5,6 +5,7 @@ import { Animated } from 'react-animated-css';
 import './About.scss';
 import Strings from '../utils/Strings';
 import LanguageContext from '../context/LanguageContext';
+import CircleElement from './CircleElement';
 
 type AboutProps = {
 	setPageNumber: any;
@@ -29,50 +30,24 @@ const About: React.FC<AboutProps> = (props) => {
 			{data => {
 				forceUpdate(data.lang);
 				return(
-		<div className='about' style={{ display: 'flex' }}>
-			<Animated animationIn='fadeIn' animationOut='fadeOut' isVisible>
-				<div className={'modal'}>
-					<div
-						style={{
-							display: 'flex',
-							justifyContent: 'center',
-							alignContent: 'center',
-						}}>
-						<div className='content'>
-							<div className='inner-content'>
-								<div className='row'>
-									<FontAwesomeIcon icon={faMapPin} size='lg' />
-									<div className='text'>
-										<p>{info.location}</p>
-									</div>
-								</div>
-								<div className='row'>
-									<div className='text'>
-										<p>{info.education[0]}</p>
-										<p>{info.education[1]}</p>
-										<p>{info.education[2]}</p>
-									</div>
-									<FontAwesomeIcon icon={faGraduationCap} size='lg' />
-								</div>
-								<div className='row'>
-									<FontAwesomeIcon icon={faGlobe} size='lg' />
-									<div className='text'>
-										<p>{info.languages}</p>
-									</div>
-								</div>
+					<div id='about'>
+						<div className='circles-container'>
+							<CircleElement label={info.languages} icon="remixicon-global-line" />
+							<CircleElement label={info.location} icon="remixicon-road-map-line" />
+							<CircleElement label={info.education} icon="remixicon-bank-line" />
+						</div>
+						
+						<div id='about-content'>
+							<div className='title'>
+								<i class="em-svg em-wave ri-xl"></i>
+								<p>{info.title}</p>
 							</div>
-							<p style={{ lineHeight: 1.7 }} dangerouslySetInnerHTML={{ __html: info.description }} />
-							<a className='row' href={'mailto:' + info.email} style={{ marginTop: 20 }}>
-								<div className='text'>
-									<p>{info.email}</p>
-								</div>
-								<FontAwesomeIcon icon={faEnvelope} size='lg' />
-							</a>
+							<div className='about-container'>
+								<p className='about-text' dangerouslySetInnerHTML={{__html: info.description}}>
+								</p>
+							</div>
 						</div>
 					</div>
-				</div>
-			</Animated>
-		  </div>
 			)}}
 		</LanguageContext.Consumer>
 	);

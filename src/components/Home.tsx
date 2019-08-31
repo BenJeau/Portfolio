@@ -1,6 +1,3 @@
-import { faFacebook, faGithub, faStackOverflow, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
-import { faShareAlt } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import { Animated } from 'react-animated-css';
 import ReactTextTransition, { presets } from 'react-text-transition';
@@ -26,10 +23,10 @@ const Home: React.FC<HomeProps> = (props) => {
 	const animationIn = 'fadeIn';
 	const animationOut = 'fadeOut';
 	const bubbleContent = [
-		{ link: 'https://www.linkedin.com/in/benoit-jeaurond', icon: faLinkedinIn, ariaLabel: 'Check my LinkedIn page' },
-		{ link: 'https://github.com/BenJeau', icon: faGithub, ariaLabel: 'Check my Github page' },
-		{ link: 'https://stackoverflow.com/users/11006837/benoît-jeaurond?tab=profile', icon: faStackOverflow, ariaLabel: 'Check me on Stack Overflow' },
-		{ link: 'https://www.facebook.com/ben.jeau', icon: faFacebook, ariaLabel: 'Check my Facebook' },
+		{ link: 'https://stackoverflow.com/users/11006837/benoît-jeaurond?tab=profile', icon: 'remixicon-stack-overflow-fill', ariaLabel:'Check me on Stack Overflow' }, 
+		{ link: 'https://www.linkedin.com/in/benoit-jeaurond', icon: 'remixicon-linkedin-box-fill', ariaLabel: 'Check my LinkedIn page' },
+		{ link: 'https://github.com/BenJeau', icon: 'remixicon-github-fill', ariaLabel: 'Check my Github page' },
+		{ link: 'mailto:benoit@jeaurond.dev', icon: 'remixicon-mail-fill', ariaLabel: 'Send me an email!' },
 	];
 
 	const info = Strings().home;
@@ -90,11 +87,8 @@ const Home: React.FC<HomeProps> = (props) => {
 		<div className='home'>
 			<div className='profile-container'>
 				<div className='picture-container'>
-					<Animated animationIn={animationIn} animationOut={animationOut} isVisible>
 						<Img fluid={data.fileName.childImageSharp.fluid} alt="Profile picture" className='picture' style={{borderRadius: 150}}/>
-					</Animated>
-
-					<Animated animationIn={animationIn} animationOut={animationOut} isVisible>
+					
 						<div className='bubble' onMouseOver={bubbleOnMouseOver} onMouseLeave={bubbleOnMouseLeave}>
 							<Animated
 								animationIn={animationIn}
@@ -104,7 +98,7 @@ const Home: React.FC<HomeProps> = (props) => {
 								className='social'>
 								{bubbleContent.map(({ link, icon, ariaLabel }, key) => (
 									<a href={link} key={key} target='_blank' rel='noopener noreferrer' aria-label={ariaLabel}>
-										<FontAwesomeIcon icon={icon} size='lg' className='icon' />
+										<i className={icon + ' ri-xl icon'}></i>
 									</a>
 								))}
 							</Animated>
@@ -114,16 +108,15 @@ const Home: React.FC<HomeProps> = (props) => {
 								animationOut={animationOut}
 								isVisible={!((showBigBubble && bubbleMouse) || isSmallWidth)}
 								style={{ display: !((showBigBubble && bubbleMouse) || isSmallWidth) ? 'flex' : 'none' }}>
-								<FontAwesomeIcon icon={faShareAlt} size='lg' />
+									<i className="remixicon-share-line ri-xl"></i>
 							</Animated>
 						</div>
-					</Animated>
 				</div>
 
-				<div>
+				<div className='home-text'>
 					<h1 css={css`display: flex`}>
-						<span css={css`font-weight: 100; margin-right: 0.3em`}>Benoît</span>
-						<span css={css`text-transform: uppercase`}>Jeaurond</span>
+						<span id='first-name'>Benoît</span>
+						<span id='last-name'>Jeaurond</span>
 					</h1>
 
 					<ReactTextTransition
