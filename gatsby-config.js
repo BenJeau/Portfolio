@@ -5,7 +5,8 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Pandas Eating Lots`,
+    title: `Benoît Jeaurond`,
+    description: `Benoît Jearond's Portfolio`
   },
   plugins: [
     {
