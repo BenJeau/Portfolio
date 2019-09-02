@@ -9,7 +9,6 @@ export default () => {
 	const [, forceUpdate] = useState('');
 
 	const info = Strings().navigation.pages;
-	console.log(info[0]);
 
 	return (
 		<LanguageContext.Consumer>

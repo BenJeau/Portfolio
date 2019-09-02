@@ -3,7 +3,7 @@ name: Android-Smart-Lights
 link: https://github.com/BenJeau/Android-Smart-Lights
 readmeLink: https://raw.githubusercontent.com/BenJeau/Android-Smart-Lights/master/README.md
 description: Control TP Link Smart plugs with an Android device
-year: 2018
+date: 2018-05-12T01:15:36Z
 languages: ["Java"]
 ---
 

@@ -23,7 +23,8 @@ module.exports = {
     },
     `gatsby-plugin-emotion`,
     `gatsby-plugin-sass`,
-	`gatsby-transformer-sharp`,
+  `gatsby-transformer-sharp`,
+  `gatsby-plugin-favicon`,
 	`gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

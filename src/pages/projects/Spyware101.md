@@ -3,7 +3,7 @@ name: Spyware101
 link: https://github.com/BenJeau/Spyware101
 readmeLink: https://raw.githubusercontent.com/BenJeau/Spyware101/master/README.md
 description: Java spyware to see and gather the user's computer's data
-year: 2017
+date: 2017-10-26T21:13:56Z
 languages: ["Java","Batchfile"]
 ---
 

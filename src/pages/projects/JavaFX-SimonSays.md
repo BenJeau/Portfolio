@@ -3,7 +3,7 @@ name: JavaFX-SimonSays
 link: https://github.com/BenJeau/JavaFX-SimonSays
 readmeLink: https://raw.githubusercontent.com/BenJeau/JavaFX-SimonSays/master/README.md
 description: Simon Says game developed in JavaFX
-year: 2018
+date: 2018-04-16T02:38:00Z
 languages: ["Java","CSS"]
 ---
 

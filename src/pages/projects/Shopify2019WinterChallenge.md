@@ -3,7 +3,7 @@ name: Shopify2019WinterChallenge
 link: https://github.com/BenJeau/Shopify2019WinterChallenge
 readmeLink: https://raw.githubusercontent.com/BenJeau/Shopify2019WinterChallenge/master/README.md
 description: Mobile Android application used to apply at Shopify for the winter of 2019
-year: 2019
+date: 2019-02-24T23:34:01Z
 languages: ["Java"]
 ---
 

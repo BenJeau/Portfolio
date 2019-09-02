@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { Animated } from 'react-animated-css';
 import './LanguageSwitch.scss';
 import LanguageContext from '../context/LanguageContext';
+import { oppositeLang } from '../utils/Strings';
 
 /**
  * The language switcher component located at the bottom rigth of the webpage to toggle the language
@@ -29,7 +30,7 @@ const LanguageSwitch: React.FC = (props) => {
 						onMouseEnter={() => setHover(true)}
 						onMouseLeave={() => setHover(false)}>
 						<Animated animationIn='fadeIn' animationOut='fadeOut' isVisible={hover} animationInDuration={100} animationOutDuration={100}>
-							<p style={{opacity: visible ? 1 : 0}}>{data.lang}</p>
+							<p style={{opacity: visible ? 1 : 0}}>{oppositeLang()}</p>
 						</Animated>
 						<FontAwesomeIcon icon={faGlobeAmericas} size='lg' className='icon' />
 					</a>

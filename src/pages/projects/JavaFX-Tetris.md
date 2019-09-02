@@ -3,7 +3,7 @@ name: JavaFX-Tetris
 link: https://github.com/BenJeau/JavaFX-Tetris
 readmeLink: https://raw.githubusercontent.com/BenJeau/JavaFX-Tetris/master/README.md
 description: Tetris game programmed in JavaFX
-year: 2018
+date: 2018-07-03T22:32:25Z
 languages: ["Java","CSS"]
 ---
 

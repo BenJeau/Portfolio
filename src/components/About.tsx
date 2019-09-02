@@ -1,7 +1,4 @@
-import { faEnvelope, faGlobe, faGraduationCap, faMapPin } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
-import { Animated } from 'react-animated-css';
 import './About.scss';
 import Strings from '../utils/Strings';
 import LanguageContext from '../context/LanguageContext';
@@ -39,7 +36,7 @@ const About: React.FC<AboutProps> = (props) => {
 						
 						<div id='about-content'>
 							<div className='title'>
-								<i class="em-svg em-wave ri-xl"></i>
+								<i className="em-svg em-wave ri-xl"></i>
 								<p>{info.title}</p>
 							</div>
 							<div className='about-container'>

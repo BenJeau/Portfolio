@@ -4,7 +4,7 @@ import LanguageSwitch from "./LanguageSwitch";
 import Strings from "../utils/Strings";
 import './Navbar.scss';
 
-const Navbar: React.FC = (props) => {
+const Navbar: React.FC = () => {
 	const data = useStaticQuery(graphql`
     {
       allFile(filter: { extension: { eq: "pdf" } }) {
@@ -20,16 +20,19 @@ const Navbar: React.FC = (props) => {
 
 	const info = Strings().navigation.pages;
 
+	let pathname;
+	if (typeof window !== 'undefined') pathname = window.location.pathname;
+
 	return (
 		<div id='navbar'>
 			<div className='content'>
 				<div>
 
-				<Link to='/' className={window.location.pathname == '/' ? 'selected' : ''}>
+				<Link to='/' className={pathname == '/' ? 'selected' : ''}>
 					{info[0]}
 				</Link>
 
-				<Link to='/projects/' className={window.location.pathname == '/projects/' ? 'selected' : ''}>
+				<Link to='/projects/' className={pathname && pathname.includes('/projects/') ? 'selected' : ''}>
 					{info[1]}
 				</Link>
 

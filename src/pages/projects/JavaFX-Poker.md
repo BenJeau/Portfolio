@@ -3,7 +3,7 @@ name: JavaFX-Poker
 link: https://github.com/BenJeau/JavaFX-Poker
 readmeLink: https://raw.githubusercontent.com/BenJeau/JavaFX-Poker/master/README.md
 description: Poker game developed in JavaFX
-year: 2017
+date: 2017-11-04T00:34:15Z
 languages: ["Java","CSS"]
 ---
 

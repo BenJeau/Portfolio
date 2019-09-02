@@ -3,7 +3,7 @@ name: JavaFX-TicTacToe
 link: https://github.com/BenJeau/JavaFX-TicTacToe
 readmeLink: https://raw.githubusercontent.com/BenJeau/JavaFX-TicTacToe/master/README.md
 description: Basic single player and multiplayer tic-tac-toe game
-year: 2018
+date: 2018-04-12T02:20:17Z
 languages: ["Java","CSS"]
 ---
 

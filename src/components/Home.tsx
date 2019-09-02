@@ -122,7 +122,7 @@ const Home: React.FC<HomeProps> = (props) => {
 					<ReactTextTransition
 						text={info.description[textIndex % info.description.length]}
 						style={{ margin: '0 4px 0 0' }}
-						spring={presets.wobbly}
+						spring={presets ? presets.wobbly : null}
 						inline
 						overflow />
 				</div>

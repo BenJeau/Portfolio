@@ -23,18 +23,8 @@
         }
     }
 
-    .modal {
-        margin: 25px;
-        position: relative;
-
-        .close {
-            right: 0;
-            top: 0;
-            position: absolute;
-        }
-    }
-
     .content {
+        margin-top: 35px;
         .icon {
             color: #858585;
 
@@ -46,6 +36,43 @@
                 color: #4b4b4b;
             }
         }
+
+        .subtitle {
+            opacity: 0.5;
+        }
+
+        code {
+            background-color: #363636;
+            border-radius: 2px;
+            padding: 1px 5px;
+            margin: 0 3px;
+        }
+
+        pre {
+            background-color: #4b4b4b;
+            border-radius: 2px;
+            padding: 1px 5px;
+        
+            code {
+                background-color: transparent;
+            }
+        }
+
+        ul {
+            margin-left: 1.4rem;
+            margin-bottom: 1.05rem;
+        }
     }
 
+
+    .modal {
+        margin: 25px;
+        position: relative;
+
+        .close {
+            right: 0;
+            top: 0;
+            position: absolute;
+        }
+    }
 }

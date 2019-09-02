@@ -3,7 +3,7 @@ name: uozoneCalendar
 link: https://github.com/BenJeau/uozoneCalendar
 readmeLink: https://raw.githubusercontent.com/BenJeau/uozoneCalendar/master/README.md
 description: Headless browser that extracts the course schedule's information from uoZone
-year: 2018
+date: 2018-09-09T19:44:46Z
 languages: ["JavaScript"]
 ---
 

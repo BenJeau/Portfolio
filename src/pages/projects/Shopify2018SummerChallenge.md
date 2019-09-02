@@ -3,7 +3,7 @@ name: Shopify2018SummerChallenge
 link: https://github.com/BenJeau/Shopify2018SummerChallenge
 readmeLink: https://raw.githubusercontent.com/BenJeau/Shopify2018SummerChallenge/master/README.md
 description: Mobile Android application used to apply at Shopify for the summer of 2018
-year: 2018
+date: 2018-04-16T02:34:49Z
 languages: ["Java"]
 ---
 

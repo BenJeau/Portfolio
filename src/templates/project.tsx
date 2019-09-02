@@ -4,21 +4,27 @@ import { graphql } from "gatsby"
 import { ModalRoutingContext, Link } from 'gatsby-plugin-modal-routing'
 import feather from 'feather-icons';
 import Layout from "../components/layout";
-import Helmet from 'react-helmet';
+import Strings from "../utils/Strings";
+import moment from 'moment';
 
 export default ({ data }) => {
 
 	const moveToLink = () => {
-		var div = wrapper.querySelector('div h1');
-	
-		console.log(div, wrapper);
+		if (wrapper){
+			var div = wrapper.querySelector('div h1');
+		div.style.marginBottom = '0';
+
+
+		let created = document.createElement('p');
+		created.innerHTML = 'Created - ' + moment(post.frontmatter.date).format("MMMM Do YYYY");
+		created.classList.add('subtitle');
+		div.parentNode.insertBefore(created, div.nextSibling);
 	
 		let github = document.createElement('a');
 		github.href = post.frontmatter.link;
 		github.target = '_blank';
 		github.rel = 'noopener roreferrer';
 		github.innerHTML = feather.icons.github.toSvg();
-		github.style.marginBottom = '1.05rem';
 		github.style.marginLeft = '1rem';
 		github.classList.add('icon')
 		
@@ -30,19 +36,20 @@ export default ({ data }) => {
 		
 		div.parentNode.insertBefore(wrap, div);
 		div.remove();
-	
-		console.log(wrapper)
+		}
 	 }
 
 
   const post = data.markdownRemark
   let link = post.frontmatter.readmeLink;
   const hasReadme = post.html != "<p>does not exists</p>";
-  let wrapper = document.createElement('div');
+  
+  let wrapper;
+  if (typeof document !== 'undefined') {
+	wrapper = document.createElement('div');
+  }
 
-  console.log(post);
-
-  if (hasReadme) {
+  if (hasReadme && wrapper) {
 	wrapper.innerHTML = post.html;
   
 	if (wrapper) {
@@ -75,6 +82,8 @@ export default ({ data }) => {
 	moveToLink();
   }
 
+  const info = Strings().project;
+
 
 
   const content = (modal) => (
@@ -83,14 +92,18 @@ export default ({ data }) => {
       <Link to={`/projects/`} className='close' dangerouslySetInnerHTML={{ __html: feather.icons.x.toSvg({ height: 50, width: 50 }) }}>
       </Link>
 		{
-			hasReadme ? <div dangerouslySetInnerHTML={{ __html: wrapper.innerHTML }}/> : <div>
-				No README file is present in the selected project, but you can still see the content of the project by clicking <a href={post.frontmatter.link}>here</a>
+			hasReadme ? <div dangerouslySetInnerHTML={{ __html: wrapper && wrapper.innerHTML }}/> : <div style={{maxWidth:'500px'}}>
+				<h1>{post.frontmatter.name}</h1>
+				<p className='subtitle'>Created - {moment(post.frontmatter.date).format("MMMM Do YYYY")}</p>
+				{info.no_readme} <a href={post.frontmatter.link}>{info.no_readme_link}</a>
 				</div>
 		}
       
     </div>
   </div>
   )
+
+  console.log(post.frontmatter.date);
 
   return (
     <ModalRoutingContext.Consumer>
@@ -113,7 +126,8 @@ export const query = graphql`
       frontmatter {
         name
         link
-        readmeLink
+		readmeLink
+		date
       }
     }
   }

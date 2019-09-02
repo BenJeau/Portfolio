@@ -3,7 +3,7 @@ name: PersonalWebsite
 link: https://github.com/BenJeau/PersonalWebsite
 readmeLink: https://raw.githubusercontent.com/BenJeau/PersonalWebsite/master/README.md
 description: Files for my personal website
-year: 2019
+date: 2019-02-13T22:54:43Z
 languages: ["HTML","TypeScript","CSS","JavaScript"]
 ---
 

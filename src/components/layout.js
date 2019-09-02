@@ -1,9 +1,7 @@
 import React from "react"
-import { rhythm } from "../utils/typography"
 import LanguageContext from "../context/LanguageContext";
 import css from "@emotion/css";
 import Navbar from "./Navbar";
-import Helmet from 'react-helmet';
 import Title from './Title';
 
 export default ({ children, title }) => {
@@ -16,7 +14,8 @@ export default ({ children, title }) => {
         <div
           css={css`
 		  margin: 0 auto;
-		  padding: 0 20px;
+      margin-bottom: 70px;
+      padding: 0 20px;
           max-width: 1100px;
           display: flex;
           flex-direction: column;

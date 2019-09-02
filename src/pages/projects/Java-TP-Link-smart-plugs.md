@@ -3,7 +3,7 @@ name: Java-TP-Link-smart-plugs
 link: https://github.com/BenJeau/Java-TP-Link-smart-plugs
 readmeLink: https://raw.githubusercontent.com/BenJeau/Java-TP-Link-smart-plugs/master/README.md
 description: Controls TP-Link smart plugs with your Kasa account with this Java code
-year: 2018
+date: 2018-05-03T04:10:31Z
 languages: ["Java"]
 ---
 

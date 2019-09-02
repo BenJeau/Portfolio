@@ -24,7 +24,7 @@ const options = {
           fontSize: `45px`
         },
         a: {
-          color: `#0090da`,
+          color: `#7fbef4`,
         },
       }
     },

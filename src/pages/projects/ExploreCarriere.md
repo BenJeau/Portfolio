@@ -3,7 +3,7 @@ name: ExploreCarriere
 link: https://github.com/BenJeau/ExploreCarriere
 readmeLink: https://raw.githubusercontent.com/BenJeau/ExploreCarriere/master/README.md
 description: Projet de la classe d'IU - SEG 3525
-year: 2019
+date: 2019-06-28T23:30:15Z
 languages: ["JavaScript","Objective-C","Java","Python"]
 ---
 

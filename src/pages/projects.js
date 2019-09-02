@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import { rhythm } from "../utils/typography"
 import { Link } from "gatsby-plugin-modal-routing"
 import Layout from "../components/layout"
+import moment from 'moment';
 
 import LanguageContext from '../context/LanguageContext';
 import Strings from '../utils/Strings';
@@ -12,6 +13,7 @@ export default ({ data }) => {
 	const [, forceUpdate] = useState('');
 
 	const info = Strings().navigation.pages;
+	const info_project = Strings().project;
 
 	return (
 		<LanguageContext.Consumer>
@@ -20,8 +22,8 @@ export default ({ data }) => {
 				return (
 					<Layout title={info[1]}>
 						<div>
-							<h1 css={css`
-									margin-bottom: ${rhythm(2)};`}>Here are a list of my Github projects</h1>
+							<h1 css={css` margin-top: 50px;
+									margin-bottom: ${rhythm(2)};`}>{info_project.title}</h1>
 							{data.allMarkdownRemark.edges.map(({ node }) => (
 								<div key={node.id}>
 									<Link
@@ -43,7 +45,7 @@ export default ({ data }) => {
 										color: #bbb;
 									`}
 											>
-												— {node.frontmatter.year}
+												— {moment(node.frontmatter.date).year()}
 											</span>
 										</h3>
 										<p>{node.frontmatter.description}</p>
@@ -60,14 +62,18 @@ export default ({ data }) => {
 
 export const query = graphql`
   query {
-    allMarkdownRemark {
+    allMarkdownRemark(
+		sort: {
+		  fields: [frontmatter___date]
+		  order: DESC
+		}) {
       totalCount
       edges {
         node {
           id
           frontmatter {
             name
-            year
+            date
             description
           }
           fields {
