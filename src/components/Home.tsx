@@ -119,12 +119,14 @@ const Home: React.FC<HomeProps> = (props) => {
 						<span id='last-name'>Jeaurond</span>
 					</h1>
 
+					{ presets &&
 					<ReactTextTransition
 						text={info.description[textIndex % info.description.length]}
 						style={{ margin: '0 4px 0 0' }}
-						spring={presets ? presets.wobbly : null}
+						spring={presets.wobbly}
 						inline
 						overflow />
+					}
 				</div>
 			</div>
 		</div>

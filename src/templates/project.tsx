@@ -103,8 +103,6 @@ export default ({ data }) => {
   </div>
   )
 
-  console.log(post.frontmatter.date);
-
   return (
     <ModalRoutingContext.Consumer>
       {({ modal }) => (
