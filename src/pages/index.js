@@ -1,5 +1,5 @@
-import React, { useState } from "react"
-import Layout from "../components/layout"
+import React, { useState } from "react";
+import Layout from "../components/layout";
 import Home from "../components/Home";
 import About from "../components/About";
 import LanguageContext from '../context/LanguageContext';
@@ -15,7 +15,7 @@ export default () => {
 			{data => {
 				forceUpdate(data.lang);
 				return (
-					<Layout title={info[0]}>
+					<Layout title={info[0]} className='home-container'>
 						<Home />
 						<About />
 					</Layout>)

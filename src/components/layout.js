@@ -1,27 +1,17 @@
 import React from "react"
 import LanguageContext from "../context/LanguageContext";
-import css from "@emotion/css";
 import Navbar from "./Navbar";
 import Title from './Title';
+import './layout.scss';
 
-export default ({ children, title }) => {
+export default ({ children, title, className }) => {
   return (
     <LanguageContext.Consumer>
       {data => {
         return (
         <React.Fragment>
 		<Title title={title} />
-        <div
-          css={css`
-		  margin: 0 auto;
-      margin-bottom: 70px;
-      padding: 0 20px;
-          max-width: 1100px;
-          display: flex;
-          flex-direction: column;
-		  justify-content: space-between;
-		  animation: fadeIn 1s ease-out;
-          `}>
+        <div className={'layout ' + className}>
           {children}
         </div>
 

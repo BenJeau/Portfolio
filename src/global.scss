@@ -38,6 +38,38 @@ code {
   background: #555; 
 }
 
+@keyframes slideUp50 {
+	0% {
+    transform: translateY(50%);
+    opacity: 0;
+	}
+	100% {
+    opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes slideUp25 {
+	0% {
+    transform: translateY(25%);
+    opacity: 0;
+	}
+	100% {
+    opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes slideUp75 {
+	0% {
+    transform: translateY(75%);
+    opacity: 0;
+	}
+	100% {
+    opacity: 1;
+		transform: translateY(0);
+	}
+}
 // .ReactModal__Content {
 //   &::-webkit-scrollbar {
 //     width: 10px;

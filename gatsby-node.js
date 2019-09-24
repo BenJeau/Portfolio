@@ -22,6 +22,10 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
             test: /react-text-transition/,
             use: loaders.null(),
           },
+          // {
+          //   test: /react-pdf/,
+          //   use: loaders.null(),
+          // },
         ],
       },
     })

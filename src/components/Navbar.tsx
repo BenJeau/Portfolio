@@ -40,9 +40,9 @@ const Navbar: React.FC = () => {
 					{info[2]}
 				</Link> */}
 
-				<a href={data.allFile.edges[0].node.publicURL}>
-					<i className='remixicon-download-line ri-1x' style={{marginRight: '5px'}}/>{info[3]}
-				</a>
+<Link to='/resume/' className={pathname && pathname.includes('/resume/') ? 'selected' : ''}>
+					{info[3]}
+				</Link>
 				</div>
 
 				<LanguageSwitch />

@@ -5,8 +5,9 @@
     align-items: center;
     justify-content: center;
 	flex-direction: column;
-    margin-top: 70px;
-    color: $nav-link-color;
+    color: $nav-link-color;		
+    animation: slideUp50 1s ease forwards;
+    opacity: 0;
     
     .profile-container {
         display: flex;

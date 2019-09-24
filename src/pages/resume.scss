@@ -1,0 +1,34 @@
+@import '../constants';
+
+
+.pdf {
+    max-width: 90vw;
+    width: 600px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.6) 0px -2px 12px 0px;
+    animation: slideUp25 1s ease forwards;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.pdf-title {
+    animation: slideUp75 1s ease forwards;
+    opacity: 0;
+    text-decoration: none;
+    text-align: center;
+&:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+&:active {
+    color: $accent
+}
+
+    h4 {
+        font-weight: 300;
+        &:active {
+            color: $accent
+        }
+    }
+}

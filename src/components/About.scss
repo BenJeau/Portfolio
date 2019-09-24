@@ -8,14 +8,19 @@
 	transition: 1s border-radius ease;
 
 	.circles-container {
-		margin: 40px 0 20px 0;
+		animation: slideUp50 1s ease 0.5s forwards;
+		opacity: 0;
+		margin: 40px 0 70px 0;
 		display: flex;
-		width: 50%;
+		width: 70%;
 		justify-content: space-between;
 	}
 
 	#about-content {
+		opacity: 0;
+		animation: slideUp50 1.5s ease 1s forwards;
 		width: 100%;
+		max-width: 800px;
 		
 		p {
 			margin-bottom: 0;
@@ -34,10 +39,6 @@
 		}
 
 		.about-container {
-			background-color: $bubble;
-			padding: 15px;
-			border-radius: 10px;
-			box-shadow: rgba(0, 0, 0, 0.33) 0 3px 6px;
 		}
 
 	}

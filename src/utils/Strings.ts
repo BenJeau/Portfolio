@@ -77,6 +77,10 @@ const strings = {
 		no_readme_link: {
 			en: 'here',
 			fr: 'ici'
+		},
+		section: {
+			en: ['Mobile', 'Games', 'Robotics', 'Other'],
+			fr: ['Mobile', 'Jeux', 'Robotiques', 'Autres']
 		}
 	},
 	home: {
@@ -112,12 +116,8 @@ const strings = {
 		location: 'Ottawa, ON',
 		email: 'benoit@jeaurond.dev',
 		description: {
-			en: `I'm an Software Engineering student with interest in the advancement of technology and its inner workings, more specifically in the <b>field of forensics</b> and <b>mobile development</b>. <br/> <br/>
-			I've worked in the past at <a href='http://www.ic.gc.ca/eic/site/icgc.nsf/eng/home' target='_blank' rel='noopener noreferrer'>ISED</a>, <a href='https://www.canada.ca/en/treasury-board-secretariat.html' target='_blank' rel='noopener noreferrer'>TBS</a>, <a href='http://vaellaconsulting.com/' target='_blank' rel='noopener noreferrer'>Vaella Consulting Inc.</a>, and on my own technical support company, and I loved it. I've also worked on a variety of personal projects, which can be found on <a href='https://github.com/BenJeau' target='_blank' rel='noopener noreferrer'>my GitHub</a> or on the <a class href='/projects/'>projects tab</a>. However, I'm currently focusing my time on my studies at the <a href='https://www.uottawa.ca/en' target='_blank' rel='noopener noreferrer'>University of Ottawa</a>, and I'm excited to be working the field that I'm studying. <br/> <br/> 
-			Furthermore, I've also received the <b>Chancellor's Scholarship of the Faculty of Engineering</b>, <b>Dean’s Excellence Award</b>, <b>Governor General's Academic Medal</b>, and <b>Lieutenant Governor’s Community Volunteer Award for Students</b>. I was as well a semi-finalist for <a href='https://loranscholar.ca/' target='_blank' rel='noopener noreferrer'>Loran Scholars</a>.`,
-			fr: `Je suis un étudiant en génie logiciels avec un intérêt pour le fonctionnement et l'évolution rapide de la technologie, plus particulièrement dans le domaine de la <b>criminalistique</b> et du <b>développement d'applications mobile</b>. <br/> <br/>
-			Dans le passé, j'ai travailler à <a href='http://www.ic.gc.ca/eic/site/icgc.nsf/fra/accueil' target='_blank' rel='noopener noreferrer'>ISDE</a>, <a href='https://www.canada.ca/fr/secretariat-conseil-tresor.html' target='_blank' rel='noopener noreferrer'>SCT</a>, <a href='http://vaellaconsulting.com/' target='_blank' rel='noopener noreferrer'>Vaella Consulting Inc.</a> et pour ma propre compagnie de soutien technique, dans laquelle j'ai adoré. J'ai également travaillé sur divers projets personnels qui sont disponibles sur <a href='https://github.com/BenJeau' target='_blank' rel='noopener noreferrer'>mon GitHub</a> ou sur l'onglet de <a  href='/projects/'>projets</a>.  Cependant, je consacre maintenant un gros montant de mon temps à mes études à <a href='https://www.uottawa.ca/fr' target='_blank' rel='noopener noreferrer'>Université d'Ottawa</a> et je suis impatient de travailler dans le domaine que j'étudie. <br/> <br/> 
-			De plus, j'ai également reçu la bourse du <b>chancelier de la Faculté de génie</b>, <b>la bourse d'excellence du doyen</b>, la <b>médaille académique du gouverneur général</b> et le <b>prix du lieutenant-gouverneur pour l'action bénévole communautaire</b>. J'étais aussi semi-finaliste pour la <a href='https://www.boursierloran.ca/' target='_blank' rel='noopener noreferrer'>bourse Loran</a>.`
-		},
+			en: `I'm an Software Engineering student with interest in the advancement of technology and its inner workings, more specifically in the <b>field of forensics</b> and <b>mobile development</b>.`,
+			fr: `Je suis un étudiant en génie logiciels avec un intérêt pour le fonctionnement et l'évolution rapide de la technologie, plus particulièrement dans le domaine de la <b>criminalistique</b> et du <b>développement d'applications mobile</b>. <br/> <br/>`
+		}
 	},
 };

@@ -1,0 +1,17 @@
+.layout {
+    margin: 0 auto;
+    padding: 0 20px;
+    padding-bottom: 50px;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+    animation: fadeIn 1s ease-out;
+}
+
+.home-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
