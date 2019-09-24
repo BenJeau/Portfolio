@@ -5,6 +5,7 @@ readmeLink: https://raw.githubusercontent.com/BenJeau/Shopify2018SummerChallenge
 description: Mobile Android application used to apply at Shopify for the summer of 2018
 date: 2018-04-16T02:34:49Z
 languages: ["Java"]
+type: mobile
 ---
 
 # Shopify 2018 Summer Challenge

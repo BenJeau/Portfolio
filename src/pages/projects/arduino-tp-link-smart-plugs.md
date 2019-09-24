@@ -5,6 +5,7 @@ readmeLink: https://raw.githubusercontent.com/BenJeau/arduino-tp-link-smart-plug
 description: Control TP-Link smart plugs with arduino and raspberry pi or any other linux system
 date: 2018-02-20T01:07:37Z
 languages: ["Python","C++"]
+type: other
 ---
 
 # arduino-tp-link-smart-plugs

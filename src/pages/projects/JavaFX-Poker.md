@@ -5,6 +5,7 @@ readmeLink: https://raw.githubusercontent.com/BenJeau/JavaFX-Poker/master/README
 description: Poker game developed in JavaFX
 date: 2017-11-04T00:34:15Z
 languages: ["Java","CSS"]
+type: games
 ---
 
 # Poker

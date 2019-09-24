@@ -43,6 +43,9 @@ const About: React.FC<AboutProps> = (props) => {
 								<p className='about-text' dangerouslySetInnerHTML={{__html: info.description}}>
 								</p>
 							</div>
+							<div id='email'>
+								<a href='mailto:benoit@jeaurond.dev'><i className="remixicon-mail-fill" /> benoit@jeaurond.dev</a>
+							</div>
 						</div>
 					</div>
 			)}}

@@ -85,14 +85,18 @@ const strings = {
 	},
 	home: {
 		description: {
-			en: ['UI Passionate', 'Forensics Enthusisast', 'Mobile Developer', '3rd Year Software Engineering Student'],
+			en: ['UI Passionate', 'Digital Forensics Enthusiast', 'Mobile Developer', '3rd Year Software Engineering Student'],
 			fr: [
-				"Passionné de la conception d'interfaces",
-				'Fanatique de la criminalistique',
+				"Passionné de conceptions d'interfaces",
+				'Fanatique de juridico-informatique',
 				'Développeur mobile',
 				'Étudiant en génie logiciels de 3e année',
 			],
 		},
+	},
+	resume: {
+		en: 'click here to view as a PDF',
+		fr: 'cliquez ici pour la version PDF'
 	},
 	navigation: {
 		pages: {
@@ -116,8 +120,8 @@ const strings = {
 		location: 'Ottawa, ON',
 		email: 'benoit@jeaurond.dev',
 		description: {
-			en: `I'm an Software Engineering student with interest in the advancement of technology and its inner workings, more specifically in the <b>field of forensics</b> and <b>mobile development</b>.`,
-			fr: `Je suis un étudiant en génie logiciels avec un intérêt pour le fonctionnement et l'évolution rapide de la technologie, plus particulièrement dans le domaine de la <b>criminalistique</b> et du <b>développement d'applications mobile</b>. <br/> <br/>`
+			en: `Want to know more about me? The icon near my face allows you to access my social networks. To see my resume or my detailed projects, select the category in the navigation bar below. Feel free to contact me!`,
+			fr: `Voulez-vous en connaître plus à mon sujet? L'icône près de mon visage vous permet d'accéder à mes réseaux sociaux. Pour voir mon résumé ou mes projets détaillés, sélectionner la catégorie choisie dans la barre de navigation ci-dessous. N'hésitez pas à communiquer avec moi!`
 		}
 	},
 };

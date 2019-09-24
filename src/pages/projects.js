@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { css } from "@emotion/core"
-import { graphql, Link } from "gatsby"
+import { Link } from "gatsby"
 import Layout from "../components/layout"
 
 import './projects.scss';

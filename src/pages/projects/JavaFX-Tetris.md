@@ -5,6 +5,7 @@ readmeLink: https://raw.githubusercontent.com/BenJeau/JavaFX-Tetris/master/READM
 description: Tetris game programmed in JavaFX
 date: 2018-07-03T22:32:25Z
 languages: ["Java","CSS"]
+type: games
 ---
 
 # JavaFX-Tetris

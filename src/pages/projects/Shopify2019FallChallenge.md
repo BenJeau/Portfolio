@@ -5,6 +5,7 @@ readmeLink: https://raw.githubusercontent.com/BenJeau/Shopify2019FallChallenge/m
 description: Mobile Android application used to apply at Shopify for the fall of 2019
 date: 2019-05-02T02:49:45Z
 languages: ["Kotlin"]
+type: mobile
 ---
 
 # Shopify 2019 Fall Challenge

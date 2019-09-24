@@ -5,6 +5,7 @@ readmeLink: https://raw.githubusercontent.com/BenJeau/JavaFX-Sudoku/master/READM
 description: Sudoku game with JavaFX while creating Sudoku board using a backtracking recursive algorithm
 date: 2018-04-12T16:16:32Z
 languages: ["Java","CSS"]
+type: games
 ---
 
 # JavaFX-Sudoku

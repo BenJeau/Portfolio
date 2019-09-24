@@ -119,9 +119,7 @@
                     }
     
                     &:active {
-                        transition: 0.2s ease-out;
-                        transform: scale(0.95);
-                        color: $profile-shadow;
+                        color: $accent;
                     }
                 }
             }
@@ -202,10 +200,6 @@
 
 		#last-name {
 			font-size: 10vw;
-		}
-
-		.text-transition {
-			// font-size: calc3vw;
 		}
 
         .picture-container {

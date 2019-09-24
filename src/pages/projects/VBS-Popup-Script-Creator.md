@@ -5,6 +5,7 @@ readmeLink: https://raw.githubusercontent.com/BenJeau/VBS-Popup-Script-Creator/m
 description: Create .vbs scripts in terminal/command line
 date: 2018-04-12T02:23:45Z
 languages: ["Java"]
+type: other
 ---
 
 # VBS-Popup-Script-Creator

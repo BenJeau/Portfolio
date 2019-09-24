@@ -5,6 +5,7 @@ readmeLink: https://raw.githubusercontent.com/BenJeau/SEG2505-Android/master/REA
 description: Android application project for the SEG 2505 course
 date: 2018-10-22T00:29:19Z
 languages: ["Java"]
+type: mobile
 ---
 
 # SEG2505-Android

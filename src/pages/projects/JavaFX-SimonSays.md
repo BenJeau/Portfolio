@@ -5,6 +5,7 @@ readmeLink: https://raw.githubusercontent.com/BenJeau/JavaFX-SimonSays/master/RE
 description: Simon Says game developed in JavaFX
 date: 2018-04-16T02:38:00Z
 languages: ["Java","CSS"]
+type: games
 ---
 
 # JavaFX-SimonSays

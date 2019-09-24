@@ -16,14 +16,15 @@
     opacity: 0;
     text-decoration: none;
     text-align: center;
-&:hover {
-    text-decoration: underline;
-    color: white;
-}
+    
+    &:hover {
+        text-decoration: underline;
+        color: white;
+    }
 
-&:active {
-    color: $accent
-}
+    &:active {
+        color: $accent
+    }
 
     h4 {
         font-weight: 300;

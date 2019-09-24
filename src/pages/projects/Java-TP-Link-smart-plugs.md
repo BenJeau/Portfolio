@@ -5,6 +5,7 @@ readmeLink: https://raw.githubusercontent.com/BenJeau/Java-TP-Link-smart-plugs/m
 description: Controls TP-Link smart plugs with your Kasa account with this Java code
 date: 2018-05-03T04:10:31Z
 languages: ["Java"]
+type: other
 ---
 
 # Java-TP-Link-smart-plugs 

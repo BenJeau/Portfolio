@@ -9,14 +9,14 @@ export default ({ children, title, className }) => {
     <LanguageContext.Consumer>
       {data => {
         return (
-        <React.Fragment>
-		<Title title={title} />
-        <div className={'layout ' + className}>
-          {children}
-        </div>
+          <React.Fragment>
+            <Title title={title} />
+            <div className={'layout ' + className}>
+              {children}
+            </div>
 
-        <Navbar />
-        </React.Fragment>
+            <Navbar />
+          </React.Fragment>
         )
       }}
     </LanguageContext.Consumer>

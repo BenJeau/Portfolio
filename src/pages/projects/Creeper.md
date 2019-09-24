@@ -5,6 +5,7 @@ readmeLink: https://raw.githubusercontent.com/BenJeau/Creeper/master/README.md
 description: Program that takes screenshots periodically without the user's knowledge
 date: 2018-04-12T02:22:50Z
 languages: ["Java"]
+type: other
 ---
 
 # Creeper

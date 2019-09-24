@@ -5,6 +5,7 @@ readmeLink: https://raw.githubusercontent.com/BenJeau/uozoneCalendar/master/READ
 description: Headless browser that extracts the course schedule's information from uoZone
 date: 2018-09-09T19:44:46Z
 languages: ["JavaScript"]
+type: other
 ---
 
 # uozoneCalendar

@@ -5,6 +5,7 @@ readmeLink: https://raw.githubusercontent.com/BenJeau/Android-Smart-Lights/maste
 description: Control TP Link Smart plugs with an Android device
 date: 2018-05-12T01:15:36Z
 languages: ["Java"]
+type: mobile
 ---
 
 # Android-Smart-Lights
