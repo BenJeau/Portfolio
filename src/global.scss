@@ -49,6 +49,17 @@ code {
 	}
 }
 
+@keyframes slideUp10 {
+	0% {
+    transform: translateY(10%);
+    opacity: 0;
+	}
+	100% {
+    opacity: 1;
+		transform: translateY(0);
+	}
+}
+
 @keyframes slideUp25 {
 	0% {
     transform: translateY(25%);

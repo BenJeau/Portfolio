@@ -89,7 +89,7 @@ export default ({ data }) => {
   const content = (modal) => (
     <div className='project'>
     <div className={(!!modal && 'modal') + ' content'}>
-      <Link to={`/projects/`} className='close' dangerouslySetInnerHTML={{ __html: feather.icons.x.toSvg({ height: 50, width: 50 }) }}>
+      <Link to={`/projects/${post.frontmatter.type}`} className='close' dangerouslySetInnerHTML={{ __html: feather.icons.x.toSvg({ height: 50, width: 50 }) }}>
       </Link>
 		{
 			hasReadme ? <div dangerouslySetInnerHTML={{ __html: wrapper && wrapper.innerHTML }}/> : <div style={{maxWidth:'500px'}}>
@@ -126,6 +126,7 @@ export const query = graphql`
         link
 		readmeLink
 		date
+		type
       }
     }
   }

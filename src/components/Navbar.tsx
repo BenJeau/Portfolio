@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
 						{info[0]}
 					</Link>
 
-					<Link to='/projects/' className={pathname && pathname.includes('/projects/') ? 'selected' : ''}>
+					<Link to='/projects/' className={pathname && pathname.includes('/projects') ? 'selected' : ''}>
 						{info[1]}
 					</Link>
 
@@ -27,7 +27,7 @@ const Navbar: React.FC = () => {
 					{info[2]}
 				</Link> */}
 
-					<Link to='/resume/' className={pathname && pathname.includes('/resume/') ? 'selected' : ''}>
+					<Link to='/resume/' className={pathname && pathname.includes('/resume') ? 'selected' : ''}>
 						{info[3]}
 					</Link>
 				</div>
