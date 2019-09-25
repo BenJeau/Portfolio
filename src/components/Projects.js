@@ -9,7 +9,7 @@ import './projects.scss';
 
 export default ({ edges }) => (
         <Fragment>
-            <div className='projects' css={css`padding: 50px 0; display:flex; align-items:center; width: 100%; max-width: 800px; min-height: calc(100vh - 50px); justify-content:center; flex-direction: column`}>
+            <div className='projects' css={css`padding: 50px 0; display:flex; align-items:center; width: 100%; max-width: 800px; min-height: calc(100vh - 100px); justify-content:center; flex-direction: column`}>
                 {
                     edges.map(({node}, key) => {
                         return (

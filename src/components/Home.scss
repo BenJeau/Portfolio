@@ -8,7 +8,6 @@
     color: $nav-link-color;		
     animation: slideUp50 1s ease forwards;
     opacity: 0;
-    overflow: hidden;
     
     .profile-container {
         display: flex;
@@ -194,7 +193,7 @@
 
 @media only screen and (max-width: 500px) {
     .home {
-
+        overflow: hidden;
 		#first-name {
 			font-size: 10vw;
 		}
@@ -208,6 +207,7 @@
             width: 60vw;
 
             .picture {
+                &:hover {transform: scale(1)}
                 height: 60vw;
                 width: 60vw;
             }
