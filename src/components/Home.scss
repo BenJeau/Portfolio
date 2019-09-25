@@ -8,6 +8,7 @@
     color: $nav-link-color;		
     animation: slideUp50 1s ease forwards;
     opacity: 0;
+    overflow: hidden;
     
     .profile-container {
         display: flex;
