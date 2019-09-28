@@ -13,20 +13,19 @@ export default ({ edges }) => (
                 {
                     edges.map(({node}, key) => {
                         return (
-                            <Link
+                            <Link key={key}
                                 to={node.fields.slug}
                                 css={css`width: 100%;
                             text-decoration: none;
                             color: inherit;
                         `}
                                 asModal
-                            ><Project key={key} {...node.frontmatter}/> </Link>);
+                            ><Project {...node.frontmatter}/> </Link>);
                     })
                 }
             </div>
 
             <div css={css`background-color: #14141490; height: 100px; position: absolute; top: 0; width: 100%;left: 0`} />
             <Link to={`/projects`} className='back-arrow' dangerouslySetInnerHTML={{ __html: feather.icons['arrow-left'].toSvg({ height: 50, width: 50 }) }}/>
-
     </Fragment>
 )
