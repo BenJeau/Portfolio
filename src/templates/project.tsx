@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import './project.scss';
 import { graphql } from "gatsby"
 import { ModalRoutingContext, Link } from 'gatsby-plugin-modal-routing'
@@ -8,6 +8,8 @@ import Strings from "../utils/Strings";
 import moment from 'moment';
 
 export default ({ data }) => {
+
+	const [wrapper, setWrapper] = useState();
 
 	const moveToLink = () => {
 		if (wrapper){
@@ -43,13 +45,16 @@ export default ({ data }) => {
   const post = data.markdownRemark
   let link = post.frontmatter.readmeLink;
   const hasReadme = post.html != "<p>does not exists</p>";
-  
-  let wrapper;
-  if (typeof document !== 'undefined') {
-	wrapper = document.createElement('div');
-  }
+	
+	useEffect(() => {
+		if (typeof document !== 'undefined') {
+			setWrapper(document.createElement('div'));
+		}
+	}, [])
+
 
   if (hasReadme && wrapper) {
+
 	wrapper.innerHTML = post.html;
   
 	if (wrapper) {
@@ -109,11 +114,7 @@ export default ({ data }) => {
         <div>
           {modal ? content(modal) : 
             <Layout title={post.frontmatter.name}>
-              {() => {
-								const c = content(modal);
-								console.log(c);
-								document.querySelector('.project .content div').innerHTML = c;
-								}}
+              {content(modal)}
             </Layout>}
         </div>
       )}
