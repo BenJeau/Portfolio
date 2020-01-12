@@ -88,7 +88,7 @@ export default ({ data }) => {
 
   const content = (modal) => (
     <div className='project'>
-    <div className={(!!modal && 'modal') + ' content'}>
+    <div className={(!!modal ? 'modal' : '') + ' content'}>
       <Link to={`/projects/${post.frontmatter.type}`} className='close' dangerouslySetInnerHTML={{ __html: feather.icons.x.toSvg({ height: 50, width: 50 }) }}>
       </Link>
 		{
@@ -109,20 +109,11 @@ export default ({ data }) => {
         <div>
           {modal ? content(modal) : 
             <Layout title={post.frontmatter.name}>
-              <div className='project'>
-    <div className={(!!modal && 'modal') + ' content'}>
-      <Link to={`/projects/${post.frontmatter.type}`} className='close' dangerouslySetInnerHTML={{ __html: feather.icons.x.toSvg({ height: 50, width: 50 }) }}>
-      </Link>
-		{
-			hasReadme ? <div dangerouslySetInnerHTML={{ __html: wrapper && wrapper.innerHTML }}/> : <div style={{maxWidth:'500px'}}>
-				<h1>{post.frontmatter.name}</h1>
-				<p className='subtitle'>Created - {moment(post.frontmatter.date).format("MMMM Do YYYY")}</p>
-				{info.no_readme} <a href={post.frontmatter.link}>{info.no_readme_link}</a>
-				</div>
-		}
-      
-    </div>
-  </div>
+              {() => {
+								const c = content(modal);
+								console.log(c);
+								document.querySelector('.project .content div').innerHTML = c;
+								}}
             </Layout>}
         </div>
       )}

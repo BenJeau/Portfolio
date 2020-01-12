@@ -11,7 +11,7 @@ export default ({ children, title, className }) => {
         return (
           <React.Fragment>
             <Title title={title} />
-            <div className={'layout ' + className}>
+            <div className={'layout ' + (className ? className : '')}>
               {children}
             </div>
 
