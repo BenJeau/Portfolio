@@ -21,8 +21,8 @@ export default () => {
 				forceUpdate(da.lang);
 				return (
 					<Layout title={info[1]} css={css`min-height: 100vh; display: flex; justify-content: center; flex-direction: column; align-items: center;`}>
-						<p css={css`opacity: 0.5;`}>
-						The list of projects is currently outdated, please see my activity on <a href="https://github.com/BenJeau" target='_blank' rel='noopener noreferrer'>GitHub</a>
+						<p css={css`opacity: 0.7; text-align: center;`}>
+							The list of projects is currently outdated, please see my activity on <a href="https://github.com/BenJeau" target='_blank' rel='noopener noreferrer'>GitHub</a>
 						</p>
 						<div css={css`display:flex; justify-content:center; flex-wrap: wrap; margin-top: 40px;`}>
 							<Link to='/projects/mobile' className='project-section'><CircleElement label={section[0]} icon='ri-smartphone-line' top/></Link>
