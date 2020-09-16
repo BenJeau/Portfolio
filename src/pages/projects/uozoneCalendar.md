@@ -1,5 +1,5 @@
 ---
-name: uozoneCalendar
+name: uoZone Calendar
 link: https://github.com/BenJeau/uozoneCalendar
 readmeLink: https://raw.githubusercontent.com/BenJeau/uozoneCalendar/master/README.md
 description: Headless browser that extracts the course schedule's information from uoZone

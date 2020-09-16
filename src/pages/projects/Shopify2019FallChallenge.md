@@ -1,5 +1,5 @@
 ---
-name: Shopify2019FallChallenge
+name: Shopify 2019 Fall Challenge
 link: https://github.com/BenJeau/Shopify2019FallChallenge
 readmeLink: https://raw.githubusercontent.com/BenJeau/Shopify2019FallChallenge/master/README.md
 description: Mobile Android application used to apply at Shopify for the fall of 2019

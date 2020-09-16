@@ -1,5 +1,5 @@
 ---
-name: Shopify2018SummerChallenge
+name: Shopify 2018 Summer Challenge
 link: https://github.com/BenJeau/Shopify2018SummerChallenge
 readmeLink: https://raw.githubusercontent.com/BenJeau/Shopify2018SummerChallenge/master/README.md
 description: Mobile Android application used to apply at Shopify for the summer of 2018

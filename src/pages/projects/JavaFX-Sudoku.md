@@ -1,5 +1,5 @@
 ---
-name: JavaFX-Sudoku
+name: JavaFX - Sudoku
 link: https://github.com/BenJeau/JavaFX-Sudoku
 readmeLink: https://raw.githubusercontent.com/BenJeau/JavaFX-Sudoku/master/README.md
 description: Sudoku game with JavaFX while creating Sudoku board using a backtracking recursive algorithm

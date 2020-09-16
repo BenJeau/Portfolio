@@ -1,5 +1,5 @@
 ---
-name: Shopify2019WinterChallenge
+name: Shopify 2019 Winter Challenge
 link: https://github.com/BenJeau/Shopify2019WinterChallenge
 readmeLink: https://raw.githubusercontent.com/BenJeau/Shopify2019WinterChallenge/master/README.md
 description: Mobile Android application used to apply at Shopify for the winter of 2019

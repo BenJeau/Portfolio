@@ -1,5 +1,5 @@
 ---
-name: VBS-Popup-Script-Creator
+name: VBS Popup Script Creator
 link: https://github.com/BenJeau/VBS-Popup-Script-Creator
 readmeLink: https://raw.githubusercontent.com/BenJeau/VBS-Popup-Script-Creator/master/README.md
 description: Create .vbs scripts in terminal/command line

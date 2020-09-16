@@ -1,5 +1,5 @@
 ---
-name: SEG2505-Android
+name: SEG2505 Android
 link: https://github.com/BenJeau/SEG2505-Android
 readmeLink: https://raw.githubusercontent.com/BenJeau/SEG2505-Android/master/README.md
 description: Android application project for the SEG 2505 course

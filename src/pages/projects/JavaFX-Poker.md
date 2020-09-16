@@ -1,5 +1,5 @@
 ---
-name: JavaFX-Poker
+name: JavaFX - Poker
 link: https://github.com/BenJeau/JavaFX-Poker
 readmeLink: https://raw.githubusercontent.com/BenJeau/JavaFX-Poker/master/README.md
 description: Poker game developed in JavaFX

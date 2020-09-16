@@ -1,5 +1,5 @@
 ---
-name: arduino-tp-link-smart-plugs
+name: Arduino TP-Link Smart Plugs
 link: https://github.com/BenJeau/arduino-tp-link-smart-plugs
 readmeLink: https://raw.githubusercontent.com/BenJeau/arduino-tp-link-smart-plugs/master/README.md
 description: Control TP-Link smart plugs with arduino and raspberry pi or any other linux system

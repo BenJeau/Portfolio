@@ -1,5 +1,5 @@
 ---
-name: ExploreCarriere
+name: Explore Carrière
 link: https://github.com/BenJeau/ExploreCarriere
 readmeLink: https://raw.githubusercontent.com/BenJeau/ExploreCarriere/master/README.md
 description: Projet de la classe d'IU - SEG 3525

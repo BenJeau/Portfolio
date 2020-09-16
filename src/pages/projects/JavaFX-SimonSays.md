@@ -1,5 +1,5 @@
 ---
-name: JavaFX-SimonSays
+name: JavaFX - SimonSays
 link: https://github.com/BenJeau/JavaFX-SimonSays
 readmeLink: https://raw.githubusercontent.com/BenJeau/JavaFX-SimonSays/master/README.md
 description: Simon Says game developed in JavaFX
