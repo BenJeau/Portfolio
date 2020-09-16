@@ -29,9 +29,9 @@ const About: React.FC<AboutProps> = (props) => {
 				return(
 					<div id='about'>
 						<div className='circles-container'>
-							<CircleElement label={info.languages} icon="remixicon-global-line" />
-							<CircleElement label={info.location} icon="remixicon-road-map-line" />
-							<CircleElement label={info.education} icon="remixicon-bank-line" />
+							<CircleElement label={info.languages} icon="ri-global-line" />
+							<CircleElement label={info.location} icon="ri-road-map-line" />
+							<CircleElement label={info.education} icon="ri-bank-line" />
 						</div>
 						
 						<div id='about-content'>
@@ -44,7 +44,7 @@ const About: React.FC<AboutProps> = (props) => {
 								</p>
 							</div>
 							<div id='email'>
-								<a href='mailto:benoit@jeaurond.dev'><i className="remixicon-mail-fill" /> benoit@jeaurond.dev</a>
+								<a href='mailto:benoit@jeaurond.dev'><i className="ri-mail-fill" /> benoit@jeaurond.dev</a>
 							</div>
 						</div>
 					</div>

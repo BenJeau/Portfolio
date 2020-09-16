@@ -3,7 +3,7 @@ import Typography from "typography"
 const options = {
     googleFonts: [
       {
-        name: `Arvo`,
+        name: `Poppins`,
         styles: [`400`, `400i`, `700`, `700i`],
       },
     ],
@@ -12,8 +12,8 @@ const options = {
     headerColor: `rgba(255,255,255,1)`,
     bodyColor: `rgba(255,255,255,1)`,
     blockMarginBottom: 0.75,
-    headerFontFamily: [`Arvo`, `sans-serif`],
-    bodyFontFamily: [`Arvo`, `sans-serif`],
+    headerFontFamily: [`Poppins`, `sans-serif`],
+    bodyFontFamily: [`Poppins`, `sans-serif`],
     overrideStyles: () => {
       return {
         html: {

@@ -85,12 +85,12 @@ const strings = {
 	},
 	home: {
 		description: {
-			en: ['UI Passionate', 'Digital Forensics Enthusiast', 'Mobile Developer', '3rd Year Software Engineering Student'],
+			en: ['UI Passionate', 'Digital Forensics Enthusiast', 'Mobile/Web Developer', '4th Year Software Engineering Student'],
 			fr: [
 				"Passionné de conceptions d'interfaces",
 				'Fanatique de juridico-informatique',
-				'Développeur mobile',
-				'Étudiant en génie logiciels de 3e année',
+				'Développeur mobile/web',
+				'Étudiant en génie logiciels de 4e année',
 			],
 		},
 	},

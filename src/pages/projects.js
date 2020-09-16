@@ -22,10 +22,10 @@ export default () => {
 				return (
 					<Layout title={info[1]} css={css`min-height: 100vh; display: flex; justify-content: center;`} >
 						<div css={css`display:flex; justify-content:center; flex-wrap: wrap`}>
-							<Link to='/projects/mobile' className='project-section'><CircleElement label={section[0]} icon='remixicon-smartphone-line' top/></Link>
-							<Link to='/projects/games' className='project-section'><CircleElement label={section[1]} icon='remixicon-trophy-line' top/></Link>
+							<Link to='/projects/mobile' className='project-section'><CircleElement label={section[0]} icon='ri-smartphone-line' top/></Link>
+							<Link to='/projects/games' className='project-section'><CircleElement label={section[1]} icon='ri-trophy-line' top/></Link>
 							{/* <Link to='/projects/robotics' className='project-section'><CircleElement label={section[2]} icon='remixicon-robot-line' top/></Link> */}
-							<Link to='/projects/other' className='project-section'><CircleElement label={section[3]} icon='remixicon-article-line' top/></Link>
+							<Link to='/projects/other' className='project-section'><CircleElement label={section[3]} icon='ri-article-line' top/></Link>
 						</div>
 					</Layout>
 				)

@@ -23,10 +23,10 @@ const Home: React.FC<HomeProps> = (props) => {
 	const animationIn = 'fadeIn';
 	const animationOut = 'fadeOut';
 	const bubbleContent = [
-		{ link: 'https://stackoverflow.com/users/11006837/benoît-jeaurond?tab=profile', icon: 'remixicon-stack-overflow-fill', ariaLabel:'Check me on Stack Overflow' }, 
-		{ link: 'https://www.linkedin.com/in/benoit-jeaurond', icon: 'remixicon-linkedin-box-fill', ariaLabel: 'Check my LinkedIn page' },
-		{ link: 'https://github.com/BenJeau', icon: 'remixicon-github-fill', ariaLabel: 'Check my Github page' },
-		{ link: 'https://gitlab.com/BenJeau', icon: 'remixicon-gitlab-line', ariaLabel: 'Check my Gitlab page' },
+		{ link: 'https://stackoverflow.com/users/11006837/benoît-jeaurond?tab=profile', icon: 'ri-stack-overflow-fill', ariaLabel:'Check me on Stack Overflow' }, 
+		{ link: 'https://www.linkedin.com/in/benoit-jeaurond', icon: 'ri-linkedin-box-fill', ariaLabel: 'Check my LinkedIn page' },
+		{ link: 'https://github.com/BenJeau', icon: 'ri-github-fill', ariaLabel: 'Check my Github page' },
+		// { link: 'https://gitlab.com/BenJeau', icon: 'ri-gitlab-line', ariaLabel: 'Check my Gitlab page' },
 		// { link: '', icon: 'remixicon-mail-fill', ariaLabel: 'Send me an email!' },
 	];
 
@@ -109,7 +109,7 @@ const Home: React.FC<HomeProps> = (props) => {
 								animationOut={animationOut}
 								isVisible={!((showBigBubble && bubbleMouse) || isSmallWidth)}
 								style={{ display: !((showBigBubble && bubbleMouse) || isSmallWidth) ? 'flex' : 'none' }}>
-									<i className="remixicon-share-line ri-xl"></i>
+									<i className="ri-share-line ri-xl"></i>
 							</Animated>
 						</div>
 				</div>
