@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { css } from '@emotion/core';
 import { graphql, useStaticQuery } from 'gatsby';
-import Layout from '../components/layout/Layout';
 import Img from 'gatsby-image';
 
-import LanguageContext from '../context/LanguageContext';
+import { Layout } from '../components';
+import { LanguageContext } from '../context';
 import Strings from '../utils/Strings';
 
 import './resume.scss';

@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
 import { css } from '@emotion/core';
 import { Link } from 'gatsby';
-import Layout from '../components/layout/Layout';
+
+import { Layout, CircleElement } from '../components';
+import { LanguageContext } from '../context';
+import Strings from '../utils/Strings';
 
 import './projects.scss';
 
-import LanguageContext from '../context/LanguageContext';
-import Strings from '../utils/Strings';
-import CircleElement from '../components/circleElement/CircleElement';
-
-export default () => {
+const Projects: React.FC = () => {
   const [, forceUpdate] = useState('');
 
   const info = Strings().navigation.pages;
@@ -70,3 +69,5 @@ export default () => {
     </LanguageContext.Consumer>
   );
 };
+
+export default Projects;

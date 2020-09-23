@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Strings from '../../utils/Strings';
-import LanguageContext from '../../context/LanguageContext';
+import { LanguageContext } from '../../context';
 import CircleElement from '../circleElement/CircleElement';
 
 import './About.scss';

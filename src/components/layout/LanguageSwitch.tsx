@@ -2,7 +2,7 @@ import { faGlobeAmericas } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState, useEffect } from 'react';
 import { Animated } from 'react-animated-css';
-import LanguageContext from '../../context/LanguageContext';
+import { LanguageContext } from '../../context';
 import { oppositeLang } from '../../utils/Strings';
 
 import './LanguageSwitch.scss';

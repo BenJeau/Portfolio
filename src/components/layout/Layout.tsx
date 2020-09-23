@@ -1,5 +1,5 @@
 import React from 'react';
-import LanguageContext from '../../context/LanguageContext';
+import { LanguageContext } from '../../context';
 import Navbar from './Navbar';
 import Title from './Title';
 

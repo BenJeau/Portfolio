@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { About, Home, Layout } from '../components';
-import LanguageContext from '../context/LanguageContext';
+import { LanguageContext } from '../context';
 import Strings from '../utils/Strings';
 
 export default () => {

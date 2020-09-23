@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 
 import { Layout, Projects } from '../../components';
-import LanguageContext from '../../context/LanguageContext';
+import { LanguageContext } from '../../context';
 import Strings from '../../utils/Strings';
 
 export default () => {
