@@ -1,5 +1,24 @@
-.em-wave{background-image:url("https://twemoji.maxcdn.com/2/72x72/1f44b.png")}
-.em-wave.em-svg{background:url("https://twemoji.maxcdn.com/2/72x72/1f44b.png");background-image:url("https://twemoji.maxcdn.com/2/svg/1f44b.svg"),none}
-.em-briefcase{background-image:url("https://twemoji.maxcdn.com/2/72x72/1f4bc.png")}
-.em-briefcase.em-svg{background:url("https://twemoji.maxcdn.com/2/72x72/1f4bc.png");background-image:url("https://twemoji.maxcdn.com/2/svg/1f4bc.svg"),none}
-.em,.em-svg{height:1.5em;width:1.5em;background-position:center;background-repeat:no-repeat;background-size:contain;display:inline-block;vertical-align:middle}
+.em-wave {
+  background-image: url('https://twemoji.maxcdn.com/2/72x72/1f44b.png');
+}
+.em-wave.em-svg {
+  background: url('https://twemoji.maxcdn.com/2/72x72/1f44b.png');
+  background-image: url('https://twemoji.maxcdn.com/2/svg/1f44b.svg'), none;
+}
+.em-briefcase {
+  background-image: url('https://twemoji.maxcdn.com/2/72x72/1f4bc.png');
+}
+.em-briefcase.em-svg {
+  background: url('https://twemoji.maxcdn.com/2/72x72/1f4bc.png');
+  background-image: url('https://twemoji.maxcdn.com/2/svg/1f4bc.svg'), none;
+}
+.em,
+.em-svg {
+  height: 1.5em;
+  width: 1.5em;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+}

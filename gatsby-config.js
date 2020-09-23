@@ -1,12 +1,7 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
 module.exports = {
   siteMetadata: {
     title: `Benoît Jeaurond`,
-    description: `Benoît Jearond's Portfolio`
+    description: `Benoît Jearond's Portfolio`,
   },
   plugins: [
     {
@@ -24,9 +19,9 @@ module.exports = {
     },
     `gatsby-plugin-emotion`,
     `gatsby-plugin-sass`,
-  `gatsby-transformer-sharp`,
-  `gatsby-plugin-favicon`,
-	`gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-favicon`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -41,7 +36,7 @@ module.exports = {
         stripMetadata: true,
       },
     },
-      {
+    {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
@@ -50,9 +45,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-typescript`,
       options: {
-        isTSX: true, // defaults to false
-        jsxPragma: `jsx`, // defaults to "React"
-        allExtensions: true, // defaults to false
+        isTSX: true,
+        jsxPragma: `jsx`,
+        allExtensions: true,
       },
     },
     {
@@ -64,7 +59,7 @@ module.exports = {
 
         // Object of props that will be passed to the react-modal container
         // See http://reactcommunity.org/react-modal/#usage
-        modalProps: { 
+        modalProps: {
           closeTimeoutMS: 200,
           style: {
             overlay: {
@@ -87,9 +82,9 @@ module.exports = {
               left: 0,
               margin: `100px 0`,
             },
-          }
+          },
         },
-      }
+      },
     },
   ],
-}
+};

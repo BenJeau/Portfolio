@@ -1,0 +1,53 @@
+@import '../../constants';
+
+.language-switch {
+  transition: 2s;
+
+  a {
+    margin: 0 0 30px 0 !important;
+    background-color: transparent;
+    border-width: 0px;
+    transition: 0.1s ease-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $nav-link-color;
+    user-select: none;
+    transition: color 0.1s ease-out;
+
+    @media only screen and (max-width: 380px) {
+      color: transparent;
+      pointer-events: none;
+      cursor: default;
+    }
+
+    p {
+      margin: 0 0 5px 0;
+      font-size: 15px;
+      text-transform: uppercase;
+      color: $background;
+      background-color: $nav-link-color;
+      padding: 3px 5px;
+      border-radius: 5px;
+      box-shadow: #23232350 0px 2px 2px;
+    }
+
+    .animated {
+      opacity: 0;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:active {
+      transition: 0.1s ease-out;
+      color: $profile-shadow;
+    }
+
+    &:active > div > p {
+      transition: 0.1s ease-out;
+      background-color: $nav-link-color;
+    }
+  }
+}

@@ -1,13 +1,19 @@
-import React from "react"
-import LanguageContext from "../context/LanguageContext";
-import Navbar from "./Navbar";
+import React from 'react';
+import LanguageContext from '../../context/LanguageContext';
+import Navbar from './Navbar';
 import Title from './Title';
+
 import './layout.scss';
 
-export default ({ children, title, className }) => {
+interface LayoutProps {
+  title: string;
+  className?: string;
+}
+
+const Layout: React.FC<LayoutProps> = ({ children, title, className }) => {
   return (
     <LanguageContext.Consumer>
-      {data => {
+      {(data) => {
         return (
           <React.Fragment>
             <Title title={title} />
@@ -17,8 +23,10 @@ export default ({ children, title, className }) => {
 
             <Navbar />
           </React.Fragment>
-        )
+        );
       }}
     </LanguageContext.Consumer>
-  )
-}
+  );
+};
+
+export default Layout;
