@@ -7284,7 +7284,7 @@ gatsby-transformer-sharp@^2.5.15:
     semver "^7.3.2"
     sharp "^0.25.4"
 
-gatsby@^2.24.62:
+gatsby@^2.24.64:
   version "2.24.64"
   resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.24.64.tgz#3d374949d84b60d34f6890b68875767d23dc3fad"
   integrity sha512-Pn/H87dnTUx2Ouj+84vqysk+UPtaV+WJU7HiJniDBd5wKDtNCsfvi9tRa4mitWvAYO03EByUbsCrYFENMD1DPA==
@@ -15013,7 +15013,7 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@^4.0.2:
+typescript@^4.0.3:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.0.3.tgz#153bbd468ef07725c1df9c77e8b453f8d36abba5"
   integrity sha512-tEu6DGxGgRJPb/mVPIZ48e69xCn2yRmCgYmDugAVwmJ6o+0u1RI18eO7E7WBTLYLaEVVOhwQmcdhQHweux/WPg==
