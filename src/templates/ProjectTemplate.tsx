@@ -4,9 +4,9 @@ import dayjs from 'dayjs';
 import { Link, FormattedMessage } from 'gatsby-plugin-intl';
 
 import { Layout } from '../components';
-import './project.scss';
+import './ProjectTemplate.scss';
 
-export default ({ data }) => {
+const ProjectTemplate: React.FC = ({ data }) => {
   const [wrapper, setWrapper] = useState();
 
   const moveToLink = () => {
@@ -138,3 +138,5 @@ export const query = graphql`
     }
   }
 `;
+
+export default ProjectTemplate;

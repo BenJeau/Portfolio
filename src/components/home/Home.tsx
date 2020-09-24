@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Animated } from 'react-animated-css';
 import ReactTextTransition, { presets } from 'react-text-transition';
-import { graphql, StaticQuery } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 import { injectIntl, IntlShape } from 'gatsby-plugin-intl';
 
@@ -40,7 +40,7 @@ const Home: React.FC<HomeProps> = ({ intl }) => {
   const [bubbleMouse, setBubbleMouse] = useState(false);
   const [isSmallWidth, setIsSmallWidth] = useState(false);
 
-  const query = graphql`
+  const data = useStaticQuery(graphql`
     query {
       fileName: file(relativePath: { eq: "assets/images/profile.jpg" }) {
         childImageSharp {
@@ -50,7 +50,7 @@ const Home: React.FC<HomeProps> = ({ intl }) => {
         }
       }
     }
-  `;
+  `);
 
   useEffect(() => {
     animate();
@@ -94,7 +94,7 @@ const Home: React.FC<HomeProps> = ({ intl }) => {
     }, 1500);
   };
 
-  const render = (data) => (
+  return (
     <div className="home">
       <div className="profile-container">
         <div className="picture-container">
@@ -172,8 +172,6 @@ const Home: React.FC<HomeProps> = ({ intl }) => {
       </div>
     </div>
   );
-
-  return <StaticQuery query={query} render={render} />;
 };
 
 export default injectIntl(Home);

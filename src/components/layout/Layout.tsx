@@ -1,12 +1,10 @@
 import React, { Fragment, useEffect } from 'react';
-
 import dayjs from 'dayjs';
 import localizedFormat from 'dayjs/plugin/localizedFormat';
 import 'dayjs/locale/en-ca';
 import 'dayjs/locale/fr-ca';
 
 import Navbar from './Navbar';
-import Title from './Title';
 import './layout.scss';
 
 dayjs.extend(localizedFormat);

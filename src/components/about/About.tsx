@@ -1,14 +1,10 @@
 import React from 'react';
-import { FormattedMessage, injectIntl, IntlShape } from 'gatsby-plugin-intl';
+import { FormattedMessage } from 'gatsby-plugin-intl';
 
 import { CircleElement } from '../';
 import './About.scss';
 
-interface AboutProps {
-  intl: IntlShape;
-}
-
-const About: React.FC<AboutProps> = ({ intl }) => (
+const About: React.FC = () => (
   <div id="about">
     <div className="circles-container">
       <CircleElement
@@ -33,11 +29,9 @@ const About: React.FC<AboutProps> = ({ intl }) => (
         </p>
       </div>
       <div className="about-container">
-        <p
-          className="about-text"
-          dangerouslySetInnerHTML={{
-            __html: intl.formatMessage({ id: 'about.description' }),
-          }}></p>
+        <p className="about-text">
+          <FormattedMessage id="about.description" />
+        </p>
       </div>
       <div id="email">
         <a href="mailto:benoit@jeaurond.dev">
@@ -48,4 +42,4 @@ const About: React.FC<AboutProps> = ({ intl }) => (
   </div>
 );
 
-export default injectIntl(About);
+export default About;

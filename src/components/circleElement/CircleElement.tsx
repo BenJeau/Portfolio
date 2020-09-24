@@ -13,7 +13,7 @@ const CircleElement: React.FC<CircleElementProps> = ({ icon, label, top }) => (
     {top && <p className="circle-label">{label}</p>}
 
     <div className="circle">
-      <i className={icon + ' ri-2x'} />
+      <i className={`${icon} ri-2x`} />
     </div>
 
     {!top && <p className="circle-label">{label}</p>}

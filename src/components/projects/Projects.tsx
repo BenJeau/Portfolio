@@ -1,15 +1,14 @@
 import React, { Fragment } from 'react';
-import { injectIntl, IntlShape, Link } from 'gatsby-plugin-intl';
+import { Link } from 'gatsby-plugin-intl';
 
 import { Project } from '../';
-import './projects.scss';
+import './Projects.scss';
 
 interface ProjectsProps {
-  edges: any;
-  intl: IntlShape;
+  edges: any[];
 }
 
-const Projects: React.FC<ProjectsProps> = ({ edges, intl }) => (
+const Projects: React.FC<ProjectsProps> = ({ edges }) => (
   <Fragment>
     <div className="projects">
       {edges.map(({ node }, key) => (
@@ -25,4 +24,4 @@ const Projects: React.FC<ProjectsProps> = ({ edges, intl }) => (
   </Fragment>
 );
 
-export default injectIntl(Projects);
+export default Projects;
