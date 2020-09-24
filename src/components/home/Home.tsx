@@ -42,7 +42,7 @@ const Home: React.FC<HomeProps> = ({ intl }) => {
 
   const query = graphql`
     query {
-      fileName: file(relativePath: { eq: "images/profile.jpg" }) {
+      fileName: file(relativePath: { eq: "assets/images/profile.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid

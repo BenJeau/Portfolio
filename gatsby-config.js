@@ -20,8 +20,13 @@ module.exports = {
     `gatsby-plugin-emotion`,
     `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-favicon`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-favicon`,
+      options: {
+        logo: './src/assets/images/favicon.png',
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

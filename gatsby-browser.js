@@ -1,3 +1,3 @@
-import './src/global.scss';
 import 'remixicon/fonts/remixicon.css';
-import './src/emoji.css';
+import './src/global.scss';
+import './src/utils/emoji.css';

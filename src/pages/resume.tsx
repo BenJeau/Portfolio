@@ -21,7 +21,7 @@ const Resume: React.FC<ResumeProps> = ({ intl }) => {
           }
         }
       }
-      fileName: file(relativePath: { eq: "images/resume.png" }) {
+      fileName: file(relativePath: { eq: "assets/images/resume.png" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid
