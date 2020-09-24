@@ -1,8 +1,8 @@
 {
   "project": {
     "title": "Voici une liste de mes projets Github",
-    "no_readme": "Aucun fichier README n’est présent dans le projet sélectionné, mais vous pouvez toujours voir le contenu du projet en cliquant ",
-    "no_readme_link": "ici",
+    "no.readme": "Aucun fichier README n’est présent dans le projet sélectionné, mais vous pouvez toujours voir le contenu du projet en cliquant ",
+    "no.readme.link": "ici",
     "notice": "La liste des projets est actuellement obsolète, veuillez consulter mes activités sur ",
     "section": {
       "mobile": "Mobile",

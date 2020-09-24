@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { graphql } from 'gatsby';
 import dayjs from 'dayjs';
-import { Link } from 'gatsby-plugin-intl';
+import { Link, FormattedMessage } from 'gatsby-plugin-intl';
 
 import { Layout } from '../components';
 import './project.scss';
@@ -93,11 +93,6 @@ export default ({ data }) => {
     moveToLink();
   }
 
-  const info = {
-    no_readme: 'asdf',
-    no_readme_link: 'asdfasd',
-  };
-
   return (
     <Layout title={post.frontmatter.name}>
       <div className="project">
@@ -117,8 +112,10 @@ export default ({ data }) => {
               <p className="subtitle">
                 Created - {dayjs(post.frontmatter.date).format('ll')}
               </p>
-              {info.no_readme}{' '}
-              <a href={post.frontmatter.link}>{info.no_readme_link}</a>
+              <FormattedMessage id="project.no.readme" />
+              <a href={post.frontmatter.link}>
+                <FormattedMessage id="project.no.readme.link" />
+              </a>
             </div>
           )}
         </div>
