@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react';
-import feather from 'feather-icons';
 import { injectIntl, IntlShape, Link } from 'gatsby-plugin-intl';
 
 import { Project } from '../';
@@ -20,15 +19,9 @@ const Projects: React.FC<ProjectsProps> = ({ edges, intl }) => (
       ))}
     </div>
 
-    <div className="back-arrow-background" />
-
-    <Link
-      to={`/projects`}
-      className="back-arrow"
-      dangerouslySetInnerHTML={{
-        __html: feather.icons['arrow-left'].toSvg({ height: 50, width: 50 }),
-      }}
-    />
+    <Link to={`/projects`} className="back-arrow">
+      <i className="ri-arrow-left-line ri-4x" />
+    </Link>
   </Fragment>
 );
 

@@ -1,5 +1,3 @@
-import { faGlobeAmericas } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState, useEffect } from 'react';
 import { Animated } from 'react-animated-css';
 import { changeLocale, injectIntl, IntlShape } from 'gatsby-plugin-intl';
@@ -37,7 +35,7 @@ const LanguageSwitch: React.FC<LanguageSwitchProps> = ({ intl }) => {
             {intl.locale === 'en' ? 'fr' : 'en'}
           </p>
         </Animated>
-        <FontAwesomeIcon icon={faGlobeAmericas} size="lg" className="icon" />
+        <i className="ri-earth-fill ri-xl" />
       </a>
     </div>
   );

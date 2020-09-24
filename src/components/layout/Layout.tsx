@@ -25,11 +25,14 @@ const Layout: React.FC<LayoutProps> = ({ children, title, className }) => {
         dayjs.locale('fr-ca');
       }
     }, [window.location]);
+
+    useEffect(() => {
+      document.title = `${title} - Benoît Jeaurond`;
+    }, []);
   }
 
   return (
     <Fragment>
-      <Title title={title} />
       <div className={'layout ' + (className ? className : '')}>{children}</div>
       <Navbar />
     </Fragment>

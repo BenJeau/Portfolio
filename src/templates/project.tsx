@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { graphql } from 'gatsby';
-import feather from 'feather-icons';
 import dayjs from 'dayjs';
 import { Link } from 'gatsby-plugin-intl';
 
@@ -25,7 +24,7 @@ export default ({ data }) => {
       github.href = post.frontmatter.link;
       github.target = '_blank';
       github.rel = 'noopener roreferrer';
-      github.innerHTML = feather.icons.github.toSvg();
+      github.innerHTML = '<i class="ri-github-line ri-xl"></i>';
       github.style.marginLeft = '1rem';
       github.classList.add('icon');
 
@@ -103,12 +102,9 @@ export default ({ data }) => {
     <Layout title={post.frontmatter.name}>
       <div className="project">
         <div className={'content'}>
-          <Link
-            to={`/projects/${post.frontmatter.type}`}
-            className="close"
-            dangerouslySetInnerHTML={{
-              __html: feather.icons.x.toSvg({ height: 50, width: 50 }),
-            }}></Link>
+          <Link to={`/projects/${post.frontmatter.type}`} className="close">
+            <i className="ri-close-line ri-4x"></i>
+          </Link>
           {hasReadme ? (
             <div
               dangerouslySetInnerHTML={{
