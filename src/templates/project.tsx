@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { graphql } from 'gatsby';
 import feather from 'feather-icons';
-import moment from 'moment';
+import dayjs from 'dayjs';
 import { Link } from 'gatsby-plugin-intl';
 
 import { Layout } from '../components';
@@ -17,7 +17,7 @@ export default ({ data }) => {
 
       let created = document.createElement('p');
       created.innerHTML =
-        'Created - ' + moment(post.frontmatter.date).format('MMMM Do YYYY');
+        'Created - ' + dayjs(post.frontmatter.date).format('MMMM Do YYYY');
       created.classList.add('subtitle');
       div.parentNode.insertBefore(created, div.nextSibling);
 
@@ -119,7 +119,7 @@ export default ({ data }) => {
             <div style={{ maxWidth: '500px' }}>
               <h1>{post.frontmatter.name}</h1>
               <p className="subtitle">
-                Created - {moment(post.frontmatter.date).format('MMMM Do YYYY')}
+                Created - {dayjs(post.frontmatter.date).format('MMMM Do YYYY')}
               </p>
               {info.no_readme}{' '}
               <a href={post.frontmatter.link}>{info.no_readme_link}</a>
