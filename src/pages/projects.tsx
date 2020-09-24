@@ -18,7 +18,7 @@ const Projects: React.FC<ProjectsProps> = ({ intl }) => (
     title={intl.formatMessage({ id: 'navigation.pages.projects' })}
     className="layout">
     <p className="warning">
-      The list of projects is currently outdated, please see my activity on{' '}
+      <FormattedMessage id="project.notice" />
       <a
         href="https://github.com/BenJeau"
         target="_blank"
