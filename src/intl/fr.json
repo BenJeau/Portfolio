@@ -1,0 +1,34 @@
+{
+  "project": {
+    "title": "Voici une liste de mes projets Github",
+    "no_readme": "Aucun fichier README n’est présent dans le projet sélectionné, mais vous pouvez toujours voir le contenu du projet en cliquant ",
+    "no_readme_link": "ici",
+    "section": {
+      "mobile": "Mobile",
+      "games": "Jeux",
+      "other": "Autres"
+    }
+  },
+  "home": {
+    "ui": "Passionné de conceptions d'interfaces",
+    "forensics": "Fanatique de juridico-informatique",
+    "dev": "Développeur mobile/web",
+    "student": "Étudiant en génie logiciels de 4e année"
+  },
+  "resume": "cliquez ici pour la version PDF",
+  "navigation": {
+    "pages": {
+      "home": "Accueil",
+      "projects": "Projets",
+      "resume": "Resumé"
+    }
+  },
+  "about": {
+    "languages": "Anglais, Français",
+    "education": "Université d'Ottawa",
+    "title": "Salut!",
+    "location": "Ottawa, ON",
+    "email": "benoit@jeaurond.dev",
+    "description": "Voulez-vous en connaître plus à mon sujet? L'icône près de mon visage vous permet d'accéder à mes réseaux sociaux. Pour voir mon résumé ou mes projets détaillés, sélectionner la catégorie choisie dans la barre de navigation ci-dessous. N'hésitez pas à communiquer avec moi!"
+  }
+}

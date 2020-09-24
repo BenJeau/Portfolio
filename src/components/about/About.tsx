@@ -1,48 +1,51 @@
-import React, { useState } from 'react';
-import Strings from '../../utils/Strings';
-import { LanguageContext } from '../../context';
-import CircleElement from '../circleElement/CircleElement';
+import React from 'react';
+import { FormattedMessage, injectIntl, IntlShape } from 'gatsby-plugin-intl';
 
+import { CircleElement } from '../';
 import './About.scss';
 
-const About: React.FC = () => {
-  const [, forceUpdate] = useState('');
+interface AboutProps {
+  intl: IntlShape;
+}
 
-  const info = Strings().about;
+const About: React.FC<AboutProps> = ({ intl }) => (
+  <div id="about">
+    <div className="circles-container">
+      <CircleElement
+        label={<FormattedMessage id="about.languages" />}
+        icon="ri-global-line"
+      />
+      <CircleElement
+        label={<FormattedMessage id="about.location" />}
+        icon="ri-road-map-line"
+      />
+      <CircleElement
+        label={<FormattedMessage id="about.education" />}
+        icon="ri-bank-line"
+      />
+    </div>
 
-  return (
-    <LanguageContext.Consumer>
-      {(data) => {
-        forceUpdate(data.lang);
-        return (
-          <div id="about">
-            <div className="circles-container">
-              <CircleElement label={info.languages} icon="ri-global-line" />
-              <CircleElement label={info.location} icon="ri-road-map-line" />
-              <CircleElement label={info.education} icon="ri-bank-line" />
-            </div>
+    <div id="about-content">
+      <div className="title">
+        <i className="em-svg em-wave ri-xl"></i>
+        <p>
+          <FormattedMessage id="about.title" />
+        </p>
+      </div>
+      <div className="about-container">
+        <p
+          className="about-text"
+          dangerouslySetInnerHTML={{
+            __html: intl.formatMessage({ id: 'about.description' }),
+          }}></p>
+      </div>
+      <div id="email">
+        <a href="mailto:benoit@jeaurond.dev">
+          <i className="ri-mail-fill" /> benoit@jeaurond.dev
+        </a>
+      </div>
+    </div>
+  </div>
+);
 
-            <div id="about-content">
-              <div className="title">
-                <i className="em-svg em-wave ri-xl"></i>
-                <p>{info.title}</p>
-              </div>
-              <div className="about-container">
-                <p
-                  className="about-text"
-                  dangerouslySetInnerHTML={{ __html: info.description }}></p>
-              </div>
-              <div id="email">
-                <a href="mailto:benoit@jeaurond.dev">
-                  <i className="ri-mail-fill" /> benoit@jeaurond.dev
-                </a>
-              </div>
-            </div>
-          </div>
-        );
-      }}
-    </LanguageContext.Consumer>
-  );
-};
-
-export default About;
+export default injectIntl(About);

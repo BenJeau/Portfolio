@@ -1,54 +1,49 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import { Location } from '@reach/router';
-import LanguageSwitch from './LanguageSwitch';
-import Strings from '../../utils/Strings';
+import { FormattedMessage, Link } from 'gatsby-plugin-intl';
 
+import LanguageSwitch from './LanguageSwitch';
 import './Navbar.scss';
 
-const Navbar: React.FC = () => {
-  const info = Strings().navigation.pages;
+const Navbar: React.FC = () => (
+  <Location>
+    {(locationProps) => {
+      let pathname = locationProps.location.pathname;
+      return (
+        <div id="navbar">
+          <div className="content">
+            <div>
+              <Link
+                to="/"
+                className={
+                  pathname == '/en/' || pathname == '/fr/' ? 'selected' : ''
+                }>
+                {<FormattedMessage id="navigation.pages.home" />}
+              </Link>
 
-  return (
-    <Location>
-      {(locationProps) => {
-        let pathname = locationProps.location.pathname;
-        return (
-          <div id="navbar">
-            <div className="content">
-              <div>
-                <Link to="/" className={pathname == '/' ? 'selected' : ''}>
-                  {info[0]}
-                </Link>
+              <Link
+                to="/projects/"
+                className={
+                  pathname && pathname.includes('/projects') ? 'selected' : ''
+                }>
+                {<FormattedMessage id="navigation.pages.projects" />}
+              </Link>
 
-                <Link
-                  to="/projects/"
-                  className={
-                    pathname && pathname.includes('/projects') ? 'selected' : ''
-                  }>
-                  {info[1]}
-                </Link>
-
-                {/* <Link to='/work-experience/' className={window.location.pathname == '/work-experience/' ? 'selected' : ''}>
-							{info[2]}
-						</Link> */}
-
-                <Link
-                  to="/resume/"
-                  className={
-                    pathname && pathname.includes('/resume') ? 'selected' : ''
-                  }>
-                  {info[3]}
-                </Link>
-              </div>
-
-              <LanguageSwitch />
+              <Link
+                to="/resume/"
+                className={
+                  pathname && pathname.includes('/resume') ? 'selected' : ''
+                }>
+                {<FormattedMessage id="navigation.pages.resume" />}
+              </Link>
             </div>
+
+            <LanguageSwitch />
           </div>
-        );
-      }}
-    </Location>
-  );
-};
+        </div>
+      );
+    }}
+  </Location>
+);
 
 export default Navbar;

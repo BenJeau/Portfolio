@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import './project.scss';
 import { graphql } from 'gatsby';
-import { ModalRoutingContext, Link } from 'gatsby-plugin-modal-routing';
 import feather from 'feather-icons';
-import Layout from '../components/layout/Layout';
-import Strings from '../utils/Strings';
 import moment from 'moment';
+import { Link } from 'gatsby-plugin-intl';
+
+import { Layout } from '../components';
+import './project.scss';
 
 export default ({ data }) => {
   const [wrapper, setWrapper] = useState();
@@ -94,47 +94,40 @@ export default ({ data }) => {
     moveToLink();
   }
 
-  const info = Strings().project;
-
-  const content = (modal) => (
-    <div className="project">
-      <div className={(!!modal ? 'modal' : '') + ' content'}>
-        <Link
-          to={`/projects/${post.frontmatter.type}`}
-          className="close"
-          dangerouslySetInnerHTML={{
-            __html: feather.icons.x.toSvg({ height: 50, width: 50 }),
-          }}></Link>
-        {hasReadme ? (
-          <div
-            dangerouslySetInnerHTML={{ __html: wrapper && wrapper.innerHTML }}
-          />
-        ) : (
-          <div style={{ maxWidth: '500px' }}>
-            <h1>{post.frontmatter.name}</h1>
-            <p className="subtitle">
-              Created - {moment(post.frontmatter.date).format('MMMM Do YYYY')}
-            </p>
-            {info.no_readme}{' '}
-            <a href={post.frontmatter.link}>{info.no_readme_link}</a>
-          </div>
-        )}
-      </div>
-    </div>
-  );
+  const info = {
+    no_readme: 'asdf',
+    no_readme_link: 'asdfasd',
+  };
 
   return (
-    <ModalRoutingContext.Consumer>
-      {({ modal }) => (
-        <div>
-          {modal ? (
-            content(modal)
+    <Layout title={post.frontmatter.name}>
+      <div className="project">
+        <div className={'content'}>
+          <Link
+            to={`/projects/${post.frontmatter.type}`}
+            className="close"
+            dangerouslySetInnerHTML={{
+              __html: feather.icons.x.toSvg({ height: 50, width: 50 }),
+            }}></Link>
+          {hasReadme ? (
+            <div
+              dangerouslySetInnerHTML={{
+                __html: wrapper ? wrapper.innerHTML : '',
+              }}
+            />
           ) : (
-            <Layout title={post.frontmatter.name}>{content(modal)}</Layout>
+            <div style={{ maxWidth: '500px' }}>
+              <h1>{post.frontmatter.name}</h1>
+              <p className="subtitle">
+                Created - {moment(post.frontmatter.date).format('MMMM Do YYYY')}
+              </p>
+              {info.no_readme}{' '}
+              <a href={post.frontmatter.link}>{info.no_readme_link}</a>
+            </div>
           )}
         </div>
-      )}
-    </ModalRoutingContext.Consumer>
+      </div>
+    </Layout>
   );
 };
 

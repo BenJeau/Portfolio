@@ -7,12 +7,12 @@ li {
 }
 
 #navbar {
-  background-color: #2b2b2b;
+  background-color: $bubble;
   width: 100%;
   position: fixed;
-  height: 50px;
+  height: 60px;
   bottom: 0;
-  box-shadow: rgba(0, 0, 0, 0.6) 0px -2px 12px 0px;
+  // box-shadow: rgba(255, 255, 255, 0.13) 0px -2px 40px 0px;
 
   .content {
     margin: 0 auto;
@@ -26,7 +26,7 @@ li {
     justify-content: space-between;
 
     a {
-      margin: 0 25px 0 0;
+      margin: 0 30px 0 0;
       cursor: pointer;
       transition-duration: 0.2s;
       color: $nav-link-color;
@@ -36,6 +36,7 @@ li {
 
       &.selected {
         font-weight: 800;
+        text-transform: uppercase;
 
         &:hover {
           color: $nav-link-color;

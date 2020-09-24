@@ -1,73 +1,55 @@
-import React, { useState } from 'react';
-import { css } from '@emotion/core';
-import { Link } from 'gatsby';
+import React from 'react';
+import {
+  FormattedMessage,
+  injectIntl,
+  IntlShape,
+  Link,
+} from 'gatsby-plugin-intl';
 
 import { Layout, CircleElement } from '../components';
-import { LanguageContext } from '../context';
-import Strings from '../utils/Strings';
-
 import './projects.scss';
 
-const Projects: React.FC = () => {
-  const [, forceUpdate] = useState('');
+interface ProjectsProps {
+  intl: IntlShape;
+}
 
-  const info = Strings().navigation.pages;
-  const section = Strings().project.section;
+const Projects: React.FC<ProjectsProps> = ({ intl }) => (
+  <Layout
+    title={intl.formatMessage({ id: 'navigation.pages.projects' })}
+    className="layout">
+    <p className="warning">
+      The list of projects is currently outdated, please see my activity on{' '}
+      <a
+        href="https://github.com/BenJeau"
+        target="_blank"
+        rel="noopener noreferrer">
+        GitHub
+      </a>
+    </p>
+    <div className="project-sections">
+      <Link to="/projects/mobile" className="project-section">
+        <CircleElement
+          label={<FormattedMessage id="project.section.mobile" />}
+          icon="ri-smartphone-line"
+          top
+        />
+      </Link>
+      <Link to="/projects/games" className="project-section">
+        <CircleElement
+          label={<FormattedMessage id="project.section.games" />}
+          icon="ri-trophy-line"
+          top
+        />
+      </Link>
+      <Link to="/projects/other" className="project-section">
+        <CircleElement
+          label={<FormattedMessage id="project.section.other" />}
+          icon="ri-article-line"
+          top
+        />
+      </Link>
+    </div>
+  </Layout>
+);
 
-  return (
-    <LanguageContext.Consumer>
-      {(da) => {
-        forceUpdate(da.lang);
-        return (
-          <Layout
-            title={info[1]}
-            css={css`
-              min-height: 100vh;
-              display: flex;
-              justify-content: center;
-              flex-direction: column;
-              align-items: center;
-            `}>
-            <p
-              css={css`
-                opacity: 0.7;
-                text-align: center;
-              `}>
-              The list of projects is currently outdated, please see my activity
-              on{' '}
-              <a
-                href="https://github.com/BenJeau"
-                target="_blank"
-                rel="noopener noreferrer">
-                GitHub
-              </a>
-            </p>
-            <div
-              css={css`
-                display: flex;
-                justify-content: center;
-                flex-wrap: wrap;
-                margin-top: 40px;
-              `}>
-              <Link to="/projects/mobile" className="project-section">
-                <CircleElement
-                  label={section[0]}
-                  icon="ri-smartphone-line"
-                  top
-                />
-              </Link>
-              <Link to="/projects/games" className="project-section">
-                <CircleElement label={section[1]} icon="ri-trophy-line" top />
-              </Link>
-              <Link to="/projects/other" className="project-section">
-                <CircleElement label={section[3]} icon="ri-article-line" top />
-              </Link>
-            </div>
-          </Layout>
-        );
-      }}
-    </LanguageContext.Consumer>
-  );
-};
-
-export default Projects;
+export default injectIntl(Projects);

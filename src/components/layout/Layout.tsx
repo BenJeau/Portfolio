@@ -1,5 +1,4 @@
-import React from 'react';
-import { LanguageContext } from '../../context';
+import React, { Fragment } from 'react';
 import Navbar from './Navbar';
 import Title from './Title';
 
@@ -10,23 +9,12 @@ interface LayoutProps {
   className?: string;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children, title, className }) => {
-  return (
-    <LanguageContext.Consumer>
-      {(data) => {
-        return (
-          <React.Fragment>
-            <Title title={title} />
-            <div className={'layout ' + (className ? className : '')}>
-              {children}
-            </div>
-
-            <Navbar />
-          </React.Fragment>
-        );
-      }}
-    </LanguageContext.Consumer>
-  );
-};
+const Layout: React.FC<LayoutProps> = ({ children, title, className }) => (
+  <Fragment>
+    <Title title={title} />
+    <div className={'layout ' + (className ? className : '')}>{children}</div>
+    <Navbar />
+  </Fragment>
+);
 
 export default Layout;

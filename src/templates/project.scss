@@ -1,78 +1,65 @@
 .project {
+  .close {
+    position: fixed;
+    right: 25px;
+    top: 25px;
+    color: #cfcfcf;
+    border-radius: 12.5px;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 0.2s;
 
-    .close {
-        position: fixed;
-        right: 25px;
-        top: 25px;
-        color: #cfcfcf;
-        border-radius: 12.5px;
-        user-select: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition-duration: 0.2s;
-
-        &:hover {
-            cursor: pointer;
-            transform: scale(1.05);
-            transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1)
-        }
-
-        &:active {
-            transform: scale(0.9);
-        }
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.05);
+      transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
     }
 
-    .content {
-        margin-top: 35px;
-        .icon {
-            color: #858585;
+    &:active {
+      transform: scale(0.9);
+    }
+  }
 
-            &:hover {
-                color: #cdcdcd;
-            }
+  .content {
+    margin-top: 35px;
+    .icon {
+      color: #858585;
 
-            &:active {
-                color: #4b4b4b;
-            }
-        }
+      &:hover {
+        color: #cdcdcd;
+      }
 
-        .subtitle {
-            opacity: 0.5;
-        }
-
-        code {
-            background-color: #363636;
-            border-radius: 2px;
-            padding: 1px 5px;
-            margin: 0 3px;
-        }
-
-        pre {
-            background-color: #4b4b4b;
-            border-radius: 2px;
-            padding: 1px 5px;
-        
-            code {
-                background-color: transparent;
-            }
-        }
-
-        ul {
-            margin-left: 1.4rem;
-            margin-bottom: 1.05rem;
-        }
+      &:active {
+        color: #4b4b4b;
+      }
     }
 
-
-    .modal {
-        margin: 25px;
-        position: relative;
-
-        .close {
-            right: 0;
-            top: 0;
-            position: absolute;
-        }
+    .subtitle {
+      opacity: 0.5;
     }
+
+    code {
+      background-color: #363636;
+      border-radius: 2px;
+      padding: 1px 5px;
+      margin: 0 3px;
+    }
+
+    pre {
+      background-color: #4b4b4b;
+      border-radius: 2px;
+      padding: 1px 5px;
+
+      code {
+        background-color: transparent;
+      }
+    }
+
+    ul {
+      margin-left: 1.4rem;
+      margin-bottom: 1.05rem;
+    }
+  }
 }

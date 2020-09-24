@@ -1,0 +1,34 @@
+{
+  "project": {
+    "title": "Here is a list of my Github projects",
+    "no.readme": "No README file is present in the selected project, but you can still see the content of the project by clicking ",
+    "no.readme.link": "here",
+    "section": {
+      "mobile": "Mobile",
+      "games": "Games",
+      "other": "Other"
+    }
+  },
+  "home": {
+    "ui": "UI Passionate",
+    "forensics": "Digital Forensics Enthusiast",
+    "dev": "Mobile/Web Developer",
+    "student": "4th Year Software Engineering Student"
+  },
+  "resume": "click here to view as a PDF",
+  "navigation": {
+    "pages": {
+      "home": "Home",
+      "projects": "Projects",
+      "resume": "Resumé"
+    }
+  },
+  "about": {
+    "languages": "French, English",
+    "education": "University of Ottawa",
+    "title": "Hi there!",
+    "location": "Ottawa, ON",
+    "email": "benoit@jeaurond.dev",
+    "description": "Want to know more about me? The icon near my face allows you to access my social networks. To see my resume or my detailed projects, select the category in the navigation bar below. Feel free to contact me!"
+  }
+}

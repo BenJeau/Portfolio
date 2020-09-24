@@ -1,24 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { injectIntl, IntlShape } from 'gatsby-plugin-intl';
+
 import { About, Home, Layout } from '../components';
-import { LanguageContext } from '../context';
-import Strings from '../utils/Strings';
 
-export default () => {
-  const [, forceUpdate] = useState('');
+interface HomePageProps {
+  intl: IntlShape;
+}
 
-  const info = Strings().navigation.pages;
+const HomePage: React.FC<HomePageProps> = ({ intl }) => (
+  <Layout
+    title={intl.formatMessage({ id: 'navigation.pages.home' })}
+    className="home-container">
+    <Home />
+    <About />
+  </Layout>
+);
 
-  return (
-    <LanguageContext.Consumer>
-      {(data) => {
-        forceUpdate(data.lang);
-        return (
-          <Layout title={info[0]} className="home-container">
-            <Home />
-            <About />
-          </Layout>
-        );
-      }}
-    </LanguageContext.Consumer>
-  );
-};
+export default injectIntl(HomePage);

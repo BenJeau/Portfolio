@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
+import { injectIntl, IntlShape } from 'gatsby-plugin-intl';
 
 import { Layout, Projects } from '../../components';
-import { LanguageContext } from '../../context';
-import Strings from '../../utils/Strings';
 
-export default () => {
-  const [, forceUpdate] = useState('');
+interface GamesProps {
+  intl: IntlShape;
+}
 
-  const info_project = Strings().project.section;
-
+const Games: React.FC<GamesProps> = ({ intl }) => {
   const query = useStaticQuery(graphql`
     query {
       allMarkdownRemark(
@@ -36,15 +35,12 @@ export default () => {
   `);
 
   return (
-    <LanguageContext.Consumer>
-      {(da) => {
-        forceUpdate(da.lang);
-        return (
-          <Layout title={info_project[1]} className="home-container">
-            <Projects edges={query.allMarkdownRemark.edges} />
-          </Layout>
-        );
-      }}
-    </LanguageContext.Consumer>
+    <Layout
+      title={intl.formatMessage({ id: 'project.section.games' })}
+      className="home-container">
+      <Projects edges={query.allMarkdownRemark.edges} />
+    </Layout>
   );
 };
+
+export default injectIntl(Games);

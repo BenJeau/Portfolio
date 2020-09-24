@@ -1,14 +1,38 @@
 import React, { useEffect, useState } from 'react';
 import { Animated } from 'react-animated-css';
 import ReactTextTransition, { presets } from 'react-text-transition';
-import { css } from '@emotion/core';
 import { graphql, StaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
-import Strings from '../../utils/Strings';
+import { injectIntl, IntlShape } from 'gatsby-plugin-intl';
 
 import './Home.scss';
 
-const Home: React.FC = () => {
+const animationIn = 'fadeIn';
+const animationOut = 'fadeOut';
+const bubbleContent = [
+  {
+    link:
+      'https://stackoverflow.com/users/11006837/benoît-jeaurond?tab=profile',
+    icon: 'ri-stack-overflow-fill',
+    ariaLabel: 'Check me on Stack Overflow',
+  },
+  {
+    link: 'https://www.linkedin.com/in/benoit-jeaurond',
+    icon: 'ri-linkedin-box-fill',
+    ariaLabel: 'Check my LinkedIn page',
+  },
+  {
+    link: 'https://github.com/BenJeau',
+    icon: 'ri-github-fill',
+    ariaLabel: 'Check my Github page',
+  },
+];
+
+interface HomeProps {
+  intl: IntlShape;
+}
+
+const Home: React.FC<HomeProps> = ({ intl }) => {
   let inter: any;
 
   const [textIndex, setTextIndex] = useState(0);
@@ -16,30 +40,6 @@ const Home: React.FC = () => {
   const [bubbleMouse, setBubbleMouse] = useState(false);
   const [isSmallWidth, setIsSmallWidth] = useState(false);
 
-  const animationIn = 'fadeIn';
-  const animationOut = 'fadeOut';
-  const bubbleContent = [
-    {
-      link:
-        'https://stackoverflow.com/users/11006837/benoît-jeaurond?tab=profile',
-      icon: 'ri-stack-overflow-fill',
-      ariaLabel: 'Check me on Stack Overflow',
-    },
-    {
-      link: 'https://www.linkedin.com/in/benoit-jeaurond',
-      icon: 'ri-linkedin-box-fill',
-      ariaLabel: 'Check my LinkedIn page',
-    },
-    {
-      link: 'https://github.com/BenJeau',
-      icon: 'ri-github-fill',
-      ariaLabel: 'Check my Github page',
-    },
-    // { link: 'https://gitlab.com/BenJeau', icon: 'ri-gitlab-line', ariaLabel: 'Check my Gitlab page' },
-    // { link: '', icon: 'remixicon-mail-fill', ariaLabel: 'Send me an email!' },
-  ];
-
-  const info = Strings().home;
   const query = graphql`
     query {
       fileName: file(relativePath: { eq: "images/profile.jpg" }) {
@@ -147,17 +147,21 @@ const Home: React.FC = () => {
         </div>
 
         <div className="home-text">
-          <h1
-            css={css`
-              display: flex;
-            `}>
+          <h1>
             <span id="first-name">Benoît</span>
             <span id="last-name">Jeaurond</span>
           </h1>
 
           {presets && (
             <ReactTextTransition
-              text={info.description[textIndex % info.description.length]}
+              text={
+                [
+                  intl.formatMessage({ id: 'home.ui' }),
+                  intl.formatMessage({ id: 'home.forensics' }),
+                  intl.formatMessage({ id: 'home.dev' }),
+                  intl.formatMessage({ id: 'home.student' }),
+                ][textIndex % 4]
+              }
               style={{ margin: '0 4px 0 0' }}
               spring={presets.wobbly}
               inline
@@ -172,4 +176,4 @@ const Home: React.FC = () => {
   return <StaticQuery query={query} render={render} />;
 };
 
-export default Home;
+export default injectIntl(Home);

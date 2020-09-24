@@ -1,29 +1,52 @@
 .back-arrow {
-    animation: slideUp50 1s ease forwards;
-    opacity: 0;
-    position: fixed;
-    left: 25px;
-    top: 25px;
-    color: #cfcfcf;
-    border-radius: 12.5px;
-    user-select: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition-duration: 0.2s;
+  animation: slideUp50 1s ease forwards;
+  opacity: 0;
+  position: fixed;
+  left: 25px;
+  top: 25px;
+  color: #cfcfcf;
+  border-radius: 12.5px;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.2s;
 
-    &:hover {
-        cursor: pointer;
-        transform: scale(1.05);
-        transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1)
-    }
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
 
-    &:active {
-        transform: scale(0.9);
-    }
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+.back-arrow-background {
+  background-color: #14141490;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
 }
 
 .projects {
-    animation: slideUp10 1s ease 0.25s forwards;
-    opacity: 0;
+  animation: slideUp10 1s ease 0.25s forwards;
+  opacity: 0;
+  padding: 50px 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  min-height: calc(100vh - 100px);
+  justify-content: center;
+  flex-direction: column;
+}
+
+.project-link {
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
 }

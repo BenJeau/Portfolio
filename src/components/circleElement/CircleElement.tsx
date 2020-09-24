@@ -3,7 +3,7 @@ import React from 'react';
 import './CircleElement.scss';
 
 interface CircleElementProps {
-  label: string;
+  label: React.ReactElement;
   icon: string;
   top?: boolean;
 }

@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
+import { injectIntl, IntlShape } from 'gatsby-plugin-intl';
 
 import { Layout, Projects } from '../../components';
-import { LanguageContext } from '../../context';
-import Strings from '../../utils/Strings';
 
-export default () => {
-  const [, forceUpdate] = useState('');
+interface MobileProps {
+  intl: IntlShape;
+}
 
-  const info_project = Strings().project.section;
-
+const Mobile: React.FC<MobileProps> = ({ intl }) => {
   const query = useStaticQuery(graphql`
     query {
       allMarkdownRemark(
@@ -36,15 +35,12 @@ export default () => {
   `);
 
   return (
-    <LanguageContext.Consumer>
-      {(da) => {
-        forceUpdate(da.lang);
-        return (
-          <Layout title={info_project[0]} className="home-container">
-            <Projects edges={query.allMarkdownRemark.edges} />
-          </Layout>
-        );
-      }}
-    </LanguageContext.Consumer>
+    <Layout
+      title={intl.formatMessage({ id: 'project.section.mobile' })}
+      className="home-container">
+      <Projects edges={query.allMarkdownRemark.edges} />
+    </Layout>
   );
 };
+
+export default injectIntl(Mobile);

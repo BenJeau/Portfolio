@@ -1,57 +1,27 @@
 import React, { Fragment } from 'react';
-import { css } from '@emotion/core';
 import feather from 'feather-icons';
+import { injectIntl, IntlShape, Link } from 'gatsby-plugin-intl';
 
-import { Link } from 'gatsby-plugin-modal-routing';
-import Project from '../project/Project';
-
+import { Project } from '../';
 import './projects.scss';
 
 interface ProjectsProps {
   edges: any;
+  intl: IntlShape;
 }
 
-const Projects: React.FC<ProjectsProps> = ({ edges }) => (
+const Projects: React.FC<ProjectsProps> = ({ edges, intl }) => (
   <Fragment>
-    <div
-      className="projects"
-      css={css`
-        padding: 50px 0;
-        display: flex;
-        align-items: center;
-        width: 100%;
-        max-width: 800px;
-        min-height: calc(100vh - 100px);
-        justify-content: center;
-        flex-direction: column;
-      `}>
-      {edges.map(({ node }, key) => {
-        return (
-          <Link
-            key={key}
-            to={node.fields.slug}
-            css={css`
-              width: 100%;
-              text-decoration: none;
-              color: inherit;
-            `}
-            asModal>
-            <Project {...node.frontmatter} />{' '}
-          </Link>
-        );
-      })}
+    <div className="projects">
+      {edges.map(({ node }, key) => (
+        <Link key={key} to={node.fields.slug} className="project-link">
+          <Project {...node.frontmatter} />{' '}
+        </Link>
+      ))}
     </div>
 
-    <div
-      css={css`
-        background-color: #14141490;
-        height: 100px;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        left: 0;
-      `}
-    />
+    <div className="back-arrow-background" />
+
     <Link
       to={`/projects`}
       className="back-arrow"
@@ -62,4 +32,4 @@ const Projects: React.FC<ProjectsProps> = ({ edges }) => (
   </Fragment>
 );
 
-export default Projects;
+export default injectIntl(Projects);
